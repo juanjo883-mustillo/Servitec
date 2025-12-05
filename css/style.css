@@ -1,6 +1,13 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+a.cel{
+    color: white;
+}
+
+a.cel:hover{
+    color: white;
+}
 body {
     color: #666666;
     background: #dddddd;
@@ -18,14 +25,14 @@ h6 {
 }
 
 a {
-    color: #666666;
+    color: #030f27;
     transition: .3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #fdbe33;
+    color: #030f27;
     outline: none;
     text-decoration: none;
 }
