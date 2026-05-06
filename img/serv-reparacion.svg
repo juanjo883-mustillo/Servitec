@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#030f27"/>
+      <stop offset="100%" style="stop-color:#1a0505"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg2)"/>
+  <!-- grid -->
+  <line x1="0" y1="100" x2="600" y2="100" stroke="#fff" stroke-width="0.3" stroke-opacity="0.07"/>
+  <line x1="0" y1="200" x2="600" y2="200" stroke="#fff" stroke-width="0.3" stroke-opacity="0.07"/>
+  <line x1="0" y1="300" x2="600" y2="300" stroke="#fff" stroke-width="0.3" stroke-opacity="0.07"/>
+  <line x1="150" y1="0" x2="150" y2="400" stroke="#fff" stroke-width="0.3" stroke-opacity="0.07"/>
+  <line x1="300" y1="0" x2="300" y2="400" stroke="#fff" stroke-width="0.3" stroke-opacity="0.07"/>
+  <line x1="450" y1="0" x2="450" y2="400" stroke="#fff" stroke-width="0.3" stroke-opacity="0.07"/>
+
+  <!-- Alert banner top -->
+  <rect x="0" y="0" width="600" height="45" fill="#cc3300" opacity="0.85"/>
+  <text x="30" y="20" font-family="Arial Black,Arial" font-weight="900" font-size="13" fill="#ffffff">⚠ FALLA DETECTADA</text>
+  <text x="30" y="38" font-family="Arial,sans-serif" font-size="10" fill="#ffddcc">Alta temperatura — Presión fuera de rango — Ruido anormal</text>
+  <text x="480" y="28" font-family="Arial Black,Arial" font-weight="900" font-size="20" fill="#ffaa00">DIAGNÓSTICO</text>
+
+  <!-- Compressor body (damaged look) -->
+  <rect x="60" y="65" width="240" height="200" rx="8" fill="#0a2050" stroke="#cc3300" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <rect x="60" y="65" width="240" height="38" rx="8" fill="#8b0000"/>
+  <rect x="60" y="90" width="240" height="13" fill="#8b0000"/>
+  <text x="180" y="87" font-family="Arial Black,Arial" font-weight="900" font-size="12" fill="#ffddcc" text-anchor="middle">COMPRESOR — ERROR</text>
+
+  <!-- Temp gauge - red zone -->
+  <circle cx="110" cy="175" r="38" fill="#040d1e" stroke="#cc3300" stroke-width="2"/>
+  <path d="M 110 175 L 110 140 A 35 35 0 0 1 142 193 Z" fill="#cc3300" opacity="0.7"/>
+  <path d="M 110 175 L 142 193 A 35 35 0 0 1 78 193 Z" fill="#fdbe33" opacity="0.5"/>
+  <circle cx="110" cy="175" r="6" fill="#fdbe33"/>
+  <!-- needle pointing to danger zone -->
+  <line x1="110" y1="175" x2="138" y2="148" stroke="#cc3300" stroke-width="3" stroke-linecap="round"/>
+  <text x="110" y="220" font-family="Arial,sans-serif" font-size="9" fill="#cc3300" text-anchor="middle">TEMP: 118°C !</text>
+
+  <!-- Pressure gauge -->
+  <circle cx="200" cy="175" r="38" fill="#040d1e" stroke="#fdbe33" stroke-width="2"/>
+  <path d="M 200 175 L 200 140 A 35 35 0 0 1 232 193 Z" fill="#00cc66" opacity="0.4"/>
+  <path d="M 200 175 L 232 193 A 35 35 0 0 1 168 193 Z" fill="#fdbe33" opacity="0.3"/>
+  <circle cx="200" cy="175" r="6" fill="#fdbe33"/>
+  <line x1="200" y1="175" x2="168" y2="150" stroke="#cc3300" stroke-width="3" stroke-linecap="round"/>
+  <text x="200" y="220" font-family="Arial,sans-serif" font-size="9" fill="#cc3300" text-anchor="middle">PRESIÓN: 3.2 bar !</text>
+
+  <!-- Warning triangle on compressor -->
+  <polygon points="150,248 130,283 170,283" fill="#cc3300" stroke="#ffaa00" stroke-width="2"/>
+  <text x="150" y="276" font-family="Arial Black,Arial" font-weight="900" font-size="14" fill="#ffff00" text-anchor="middle">!</text>
+
+  <!-- Magnifying glass -->
+  <circle cx="350" cy="150" r="55" fill="none" stroke="#fdbe33" stroke-width="4"/>
+  <circle cx="350" cy="150" r="50" fill="#040d1e" fill-opacity="0.85"/>
+  <line x1="393" y1="193" x2="430" y2="230" stroke="#fdbe33" stroke-width="8" stroke-linecap="round"/>
+  <!-- Inside magnifier: compressor innards -->
+  <circle cx="350" cy="150" r="35" fill="none" stroke="#1a3a6b" stroke-width="1" stroke-dasharray="4,3"/>
+  <circle cx="335" cy="140" r="14" fill="none" stroke="#fdbe33" stroke-width="2"/>
+  <circle cx="365" cy="160" r="14" fill="none" stroke="#fdbe33" stroke-width="2"/>
+  <circle cx="335" cy="140" r="4" fill="#fdbe33"/>
+  <circle cx="365" cy="160" r="4" fill="#fdbe33"/>
+  <!-- Crack mark -->
+  <polyline points="348,118 352,132 344,138 350,155" stroke="#cc3300" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="350" y="185" font-family="Arial,sans-serif" font-size="8" fill="#fdbe33" text-anchor="middle">GRUPO TORNILLO</text>
+
+  <!-- Diagnostic screen right -->
+  <rect x="450" y="65" width="130" height="210" rx="8" fill="#040d1e" stroke="#fdbe33" stroke-width="1.5"/>
+  <text x="515" y="88" font-family="Arial Black,Arial" font-weight="900" font-size="10" fill="#fdbe33" text-anchor="middle">DIAGNÓSTICO</text>
+  <line x1="460" y1="95" x2="570" y2="95" stroke="#fdbe33" stroke-width="1" opacity="0.4"/>
+  <text x="460" y="112" font-family="Arial,sans-serif" font-size="9" fill="#cc3300">✖ Separador saturado</text>
+  <text x="460" y="128" font-family="Arial,sans-serif" font-size="9" fill="#cc3300">✖ Termostato bloq.</text>
+  <text x="460" y="144" font-family="Arial,sans-serif" font-size="9" fill="#fdbe33">⚠ Filtro aceite +500h</text>
+  <text x="460" y="160" font-family="Arial,sans-serif" font-size="9" fill="#fdbe33">⚠ Nivel aceite bajo</text>
+  <text x="460" y="176" font-family="Arial,sans-serif" font-size="9" fill="#00cc66">✔ Motor eléctrico OK</text>
+  <text x="460" y="192" font-family="Arial,sans-serif" font-size="9" fill="#00cc66">✔ Correas tensión OK</text>
+  <line x1="460" y1="200" x2="570" y2="200" stroke="#fdbe33" stroke-width="1" opacity="0.4"/>
+  <text x="460" y="216" font-family="Arial,sans-serif" font-size="9" fill="#aaa">Código de falla:</text>
+  <text x="460" y="232" font-family="Arial Black,Arial" font-weight="900" font-size="12" fill="#cc3300">E-042 / E-015</text>
+  <text x="460" y="254" font-family="Arial,sans-serif" font-size="9" fill="#aaa">Técnico asignado:</text>
+  <text x="460" y="268" font-family="Arial,sans-serif" font-size="9" fill="#fdbe33">SERVITEC — HOY</text>
+
+  <!-- Tools row bottom -->
+  <rect x="60" y="290" width="520" height="90" rx="8" fill="#0a1830" stroke="#1a3a6b" stroke-width="1"/>
+  <text x="300" y="312" font-family="Arial Black,Arial" font-weight="900" font-size="11" fill="#fdbe33" text-anchor="middle">REPARACIÓN EN SITIO — MISMO DÍA</text>
+  <!-- tool icons as shapes -->
+  <rect x="80" y="325" width="10" height="35" rx="3" fill="#aaa"/>
+  <rect x="76" y="323" width="18" height="8" rx="2" fill="#fdbe33"/>
+  <text x="95" y="352" font-family="Arial,sans-serif" font-size="9" fill="#888">Llave</text>
+
+  <circle cx="145" cy="338" r="14" fill="none" stroke="#fdbe33" stroke-width="2"/>
+  <circle cx="145" cy="338" r="6" fill="#fdbe33"/>
+  <text x="145" y="362" font-family="Arial,sans-serif" font-size="9" fill="#888" text-anchor="middle">Manómetro</text>
+
+  <rect x="180" y="324" width="12" height="28" rx="2" fill="#aaa"/>
+  <rect x="177" y="350" width="18" height="6" rx="1" fill="#666"/>
+  <text x="186" y="368" font-family="Arial,sans-serif" font-size="9" fill="#888" text-anchor="middle">Alicate</text>
+
+  <text x="260" y="345" font-family="Arial,sans-serif" font-size="11" fill="#00cc66">✔ Stock de repuestos</text>
+  <text x="260" y="362" font-family="Arial,sans-serif" font-size="11" fill="#00cc66">✔ Garantía de trabajo</text>
+  <text x="400" y="345" font-family="Arial,sans-serif" font-size="11" fill="#00cc66">✔ Tiempo respuesta: pocas horas</text>
+  <text x="400" y="362" font-family="Arial,sans-serif" font-size="11" fill="#00cc66">✔ Diagnóstico sin cargo</text>
+</svg>

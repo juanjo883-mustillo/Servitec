@@ -1,342 +1,642 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Builderz - Construction Company Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Construction Company Website Template" name="keywords">
-        <meta content="Construction Company Website Template" name="description">
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Venta de Compresores Industriales — SERVITEC Buenos Aires</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="venta compresores industriales Buenos Aires, compresores a tornillo, compresores de pistón, compresores portátiles, compresores libres de aceite" name="keywords">
+    <meta content="Venta de compresores industriales en Buenos Aires. A tornillo, de pistón, portátiles, libres de aceite. Stock disponible — instalación incluida. Consultá sin cargo." name="description">
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/slick/slick.css" rel="stylesheet">
-        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
-    <body>
-        <div class="wrapper">
-            <!-- Top Bar Start -->
-            <div class="top-bar">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-12">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <h1>SERVITEC</h1>
-                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
+    <style>
+        /* Product cards */
+        .producto-card {
+            background: #ffffff;
+            border-top: 4px solid #fdbe33;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: transform .3s, box-shadow .3s;
+            overflow: hidden;
+        }
+        .producto-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.14);
+        }
+        .producto-card .producto-img {
+            overflow: hidden;
+            height: 220px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .producto-card .producto-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            padding: 15px;
+            transition: transform .4s;
+        }
+        .producto-card:hover .producto-img img {
+            transform: scale(1.06);
+        }
+        .producto-card .producto-body {
+            padding: 22px 22px 18px;
+        }
+        .producto-card .producto-body h4 {
+            color: #030f27;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .producto-card .producto-body p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .producto-card .producto-body .badge-tipo {
+            display: inline-block;
+            background: #030f27;
+            color: #fdbe33;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .producto-card .producto-body .btn-consultar {
+            background: #fdbe33;
+            color: #030f27;
+            border: 2px solid #fdbe33;
+            border-radius: 0;
+            padding: 8px 20px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: .3s;
+        }
+        .producto-card .producto-body .btn-consultar:hover {
+            background: transparent;
+            color: #030f27;
+        }
+
+        /* Intro section */
+        .compresores-intro {
+            padding: 60px 0;
+            background: #ffffff;
+        }
+
+        /* Products section */
+        .compresores-grid {
+            padding: 60px 0 30px;
+            background: #f5f5f5;
+        }
+
+        /* Ventajas section */
+        .ventajas-section {
+            padding: 60px 0;
+            background: #030f27;
+            color: #fff;
+        }
+        .ventaja-item {
+            text-align: center;
+            padding: 20px 15px;
+        }
+        .ventaja-icon {
+            width: 70px;
+            height: 70px;
+            background: #fdbe33;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+        }
+        .ventaja-icon i {
+            font-size: 28px;
+            color: #030f27;
+        }
+        .ventaja-item h4 {
+            color: #fdbe33;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .ventaja-item p {
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Marcas strip */
+        .marcas-strip-comp {
+            padding: 50px 0;
+            background: #ffffff;
+            border-top: 3px solid #fdbe33;
+            border-bottom: 3px solid #fdbe33;
+        }
+
+        /* CTA section */
+        .cta-comp {
+            padding: 65px 0;
+            background: #fdbe33;
+            text-align: center;
+        }
+        .cta-comp h2 {
+            color: #030f27;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .cta-comp p {
+            color: #030f27;
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+        .btn-dark-comp {
+            background: #030f27;
+            color: #ffffff;
+            padding: 14px 40px;
+            font-size: 15px;
+            font-weight: 700;
+            border: 2px solid #030f27;
+            border-radius: 0;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px 8px;
+            transition: .3s;
+        }
+        .btn-dark-comp:hover {
+            background: transparent;
+            color: #030f27;
+            text-decoration: none;
+        }
+        .btn-outline-comp {
+            background: transparent;
+            color: #030f27;
+            padding: 14px 40px;
+            font-size: 15px;
+            font-weight: 600;
+            border: 2px solid #030f27;
+            border-radius: 0;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px 8px;
+            transition: .3s;
+        }
+        .btn-outline-comp:hover {
+            background: #030f27;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="top-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="logo">
+                            <a href="index.html">
+                                <h1>SERVITEC</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-calendar"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3>Nuestros Horarios</h3>
+                                        <p>Lunes a Viernes, 8:00 - 18:00 hs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-call"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3>Nuestro Teléfono</h3>
+                                        <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank">1154674299</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-send-mail"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3>Nuestro Mail</h3>
+                                        <p>servitec.tec@hotmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="nav-bar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-item nav-link">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link">Quiénes Somos</a>
+                            <a href="service.html" class="nav-item nav-link">Servicios</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Venta de Equipos</a>
+                                <div class="dropdown-menu">
+                                    <a href="blog.html" class="dropdown-item active">Compresores</a>
+                                    <a href="single.html" class="dropdown-item">Repuestos</a>
+                                    <a href="alquiler.html" class="dropdown-item">Alquiler y Venta</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Venta de Compresores</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="index.html">Inicio</a>
+                        <a href="blog.html">Compresores</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Intro Section Start -->
+        <div class="compresores-intro wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="section-header text-left">
+                            <p>Equipos de primera calidad con instalación incluida</p>
+                            <h2>Compresores Industriales para Cada Necesidad</h2>
+                        </div>
+                        <p style="color:#555;font-size:15px;line-height:1.8;margin-bottom:15px;">
+                            En <strong>SERVITEC</strong> vendemos e instalamos compresores industriales de las principales marcas del mercado. Con <strong>15 años de experiencia</strong> en el rubro, te asesoramos para elegir el equipo ideal según tus necesidades de producción, espacio y presupuesto.
+                        </p>
+                        <p style="color:#555;font-size:15px;line-height:1.8;margin-bottom:20px;">
+                            Trabajamos con compresores a tornillo, de pistón, portátiles, libres de aceite y de velocidad variable. Realizamos la instalación completa, puesta en marcha y capacitación al operario.
+                        </p>
+                        <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank"
+                           style="background:#fdbe33;color:#030f27;border:2px solid #fdbe33;border-radius:0;padding:12px 28px;font-weight:700;display:inline-block;text-decoration:none;transition:.3s;margin-right:10px;">
+                            <i class="fab fa-whatsapp" style="margin-right:6px;"></i> Consultar Precio
+                        </a>
+                        <a href="service.html"
+                           style="background:transparent;color:#030f27;border:2px solid #030f27;border-radius:0;padding:12px 28px;font-weight:600;display:inline-block;text-decoration:none;transition:.3s;">
+                            Ver Servicios
+                        </a>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img src="img/Compresores-1024x803.png"
+                             alt="Compresores industriales SERVITEC"
+                             loading="lazy"
+                             style="max-width:100%;height:auto;border-top:4px solid #fdbe33;box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Intro Section End -->
+
+
+        <!-- Products Grid Start -->
+        <div class="compresores-grid">
+            <div class="container">
+                <div class="section-header text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <p>Stock disponible — Entrega e instalación en toda Buenos Aires</p>
+                    <h2>Nuestros Equipos Disponibles</h2>
+                </div>
+                <div class="row">
+
+                    <!-- Compresor a Tornillo -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="producto-card">
+                            <div class="producto-img">
+                                <img src="img/compresordeairexafamyc.png" alt="Compresor a tornillo industrial" loading="lazy">
+                            </div>
+                            <div class="producto-body">
+                                <span class="badge-tipo">A Tornillo</span>
+                                <h4>Compresor a Tornillo</h4>
+                                <p>Ideal para uso continuo en industrias que requieren grandes caudales de aire. Alta eficiencia energética, bajo nivel de ruido y mantenimiento reducido.</p>
+                                <a href="https://wha.link/eE9y0e" class="btn-consultar" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp" style="margin-right:5px;"></i> Consultar
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-8 col-md-7 d-none d-lg-block">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-calendar"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Nuestros Horarios</h3>
-                                            <p>Lunes a Viernes, 8:00 - 18:00 hs</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-call"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Nuestros telefonos</h3>
-                                            <a href="https://wha.link/eE9y0e">1154674299</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-send-mail"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Nuestos Mail</h3>
-                                            <p>servitec@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+
+                    <!-- Compresor de Velocidad Variable -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="producto-card">
+                            <div class="producto-img">
+                                <img src="img/compresordeairevelocidadvariable.png" alt="Compresor de velocidad variable VSD" loading="lazy">
+                            </div>
+                            <div class="producto-body">
+                                <span class="badge-tipo">Velocidad Variable</span>
+                                <h4>Compresor VSD (Velocidad Variable)</h4>
+                                <p>Tecnología de inversor que adapta la velocidad al consumo real de aire. Ahorro energético de hasta un 35% frente a compresores de velocidad fija.</p>
+                                <a href="https://wha.link/eE9y0e" class="btn-consultar" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp" style="margin-right:5px;"></i> Consultar
+                                </a>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Compresor Libre de Aceite -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="producto-card">
+                            <div class="producto-img">
+                                <img src="img/compresoratornillolibredeaceite-768x693.png" alt="Compresor libre de aceite" loading="lazy">
+                            </div>
+                            <div class="producto-body">
+                                <span class="badge-tipo">Libre de Aceite</span>
+                                <h4>Compresor Libre de Aceite</h4>
+                                <p>Produce aire limpio sin trazas de aceite. Imprescindible para industrias farmacéuticas, alimentarias, electrónicas y laboratorios donde la pureza del aire es crítica.</p>
+                                <a href="https://wha.link/eE9y0e" class="btn-consultar" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp" style="margin-right:5px;"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compresor a Correa -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="producto-card">
+                            <div class="producto-img">
+                                <img src="img/COMPRESORACORREAM.png" alt="Compresor a correa de pistón" loading="lazy">
+                            </div>
+                            <div class="producto-body">
+                                <span class="badge-tipo">A Correa / Pistón</span>
+                                <h4>Compresor a Correa de Pistón</h4>
+                                <p>Robusto y confiable para talleres industriales y metalúrgicos. Alta presión de trabajo, fácil mantenimiento y excelente relación precio-rendimiento.</p>
+                                <a href="https://wha.link/eE9y0e" class="btn-consultar" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp" style="margin-right:5px;"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compresor Portátil -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="producto-card">
+                            <div class="producto-img">
+                                <img src="img/compresor-portatil.png" alt="Compresor portátil industrial" loading="lazy">
+                            </div>
+                            <div class="producto-body">
+                                <span class="badge-tipo">Portátil</span>
+                                <h4>Compresor Portátil Industrial</h4>
+                                <p>Diseñado para trabajos en campo, obras y espacios donde no hay instalación fija de aire comprimido. Fácil traslado y arranque rápido.</p>
+                                <a href="https://wha.link/eE9y0e" class="btn-consultar" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp" style="margin-right:5px;"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Línea EPM -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="producto-card">
+                            <div class="producto-img">
+                                <img src="img/100EPM2-3-e1764164132893.png" alt="Compresor línea EPM" loading="lazy">
+                            </div>
+                            <div class="producto-body">
+                                <span class="badge-tipo">Alta Presión</span>
+                                <h4>Compresor de Alta Presión EPM</h4>
+                                <p>Para aplicaciones industriales que requieren alta presión de trabajo. Construcción robusta, componentes de alta calidad y rendimiento consistente bajo carga continua.</p>
+                                <a href="https://wha.link/eE9y0e" class="btn-consultar" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp" style="margin-right:5px;"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <!-- Top Bar End -->
-    
-            <!-- Nav Bar Start -->
-            <div class="nav-bar">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                        <a href="#" class="navbar-brand">MENU</a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-    
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto">
-                                <a href="index.html" class="nav-item nav-link active">inicio</a>
-                                <a href="about.html" class="nav-item nav-link">Quienes Somos</a>
-                                <a href="service.html" class="nav-item nav-link">servicios</a>
-                                <a href="team.html" class="nav-item nav-link">Nuestro Equipo</a>
-                                <a href="portfolio.html" class="nav-item nav-link">Nuestros trabajos</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">venta de equipos</a>
-                                    <div class="dropdown-menu">
-                                        <a href="blog.html" class="dropdown-item">Compresores</a>
-                                        <a href="single.html" class="dropdown-item">Respuestos</a>
-                                        <a href="single.html" class="dropdown-item">bombas</a>
-                                    </div>
-                                </div>
-                                <a href="contact.html" class="nav-item nav-link">Contacto</a>
-    
-                            </div>
-                    </nav>
-                </div>
-            </div>
-            <!-- Nav Bar End -->
-            
-            
-            <!-- Page Header Start -->
-            <div class="page-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Our Blog</h2>
-                        </div>
-                        <div class="col-12">
-                            <a href="">Home</a>
-                            <a href="">Our Blog</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Page Header End -->
-
-
-            <!-- Blog Start -->
-            <div class="blog">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Latest Blog</p>
-                        <h2>Latest From Our Blog</h2>
-                    </div>
-                    <div class="row blog-page">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="img/blog-1.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="img/blog-2.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="img/blog-3.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="img/blog-1.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="img/blog-2.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="img/blog-3.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                            </ul> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog End -->
-
-
-            <!-- Footer Start -->
-            <!-- Footer Start -->
-            <div class="footer wow fadeIn" data-wow-delay="0.3s">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 col-lg-3 ">
-                            <div class="footer-contact">
-                                <h2>Nuestros Contactos</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>Astarita 1950, Marcos Paz, Buenos Aires, Argentina</p>
-                                <p><i class="fa fa-phone-alt"></i>011 - 15 - 54674299</p>
-                                <p><i class="fa fa-envelope"></i>servitec@gmail.com</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 ">
-                            <div class="footer-link">
-                                <h2>Nuestras Paginas</h2>
-                                <a href="./index.html">Inicio</a>
-                                <a href="./contact.html">Contacto</a>
-                                <a href="./team.html">Nuestro Equipo</a>
-                                <a href="./blog.html">venta de equipos</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 ">
-                            <div class="newsletter">
-                                <h2> Nuestras Novedades</h2>
-                                <p> recibi toda nuestra informacion sobre equipos y servicio Tecnico </p>
-                                <div class="form">
-                                    <input class="form-control" placeholder="mail">
-                                    <button class="btn">Enviar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
-
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         </div>
+        <!-- Products Grid End -->
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+        <!-- Ventajas Section Start -->
+        <div class="ventajas-section wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p style="color:#fdbe33;">Por qué comprar en SERVITEC</p>
+                    <h2 style="color:#ffffff;">La Solución Integral para tu Empresa</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="ventaja-item">
+                            <div class="ventaja-icon"><i class="fas fa-tools"></i></div>
+                            <h4>Instalación Incluida</h4>
+                            <p>Instalamos y ponemos en marcha tu equipo. El compresor queda funcionando desde el primer día.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="ventaja-item">
+                            <div class="ventaja-icon"><i class="fas fa-user-cog"></i></div>
+                            <h4>Asesoramiento Técnico</h4>
+                            <p>Te ayudamos a elegir el equipo correcto según tu consumo, espacio y presupuesto — sin costo.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="ventaja-item">
+                            <div class="ventaja-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h4>Garantía y Soporte</h4>
+                            <p>Todos los equipos tienen garantía. Además, somos el servicio técnico oficial para el post-venta.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="ventaja-item">
+                            <div class="ventaja-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <h4>Entrega en Buenos Aires</h4>
+                            <p>Cubrimos toda la zona metropolitana y provincia. También coordinamos envíos al interior.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ventajas Section End -->
+
+
+        <!-- Marcas Strip Start -->
+        <div class="marcas-strip-comp wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container text-center">
+                <div class="section-header">
+                    <p>Marcas líderes del mercado</p>
+                    <h2>Compresores de las Principales Marcas</h2>
+                </div>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-6 col-md-3 col-lg-2 mb-4">
+                        <img src="img/logo-kaeser.svg" alt="Kaeser Compresores"
+                             style="max-width:140px;width:100%;height:65px;object-fit:contain;" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 mb-4">
+                        <img src="img/logo-atlascopco.svg" alt="Atlas Copco"
+                             style="max-width:140px;width:100%;height:65px;object-fit:contain;" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 mb-4">
+                        <img src="img/logo-sullair.svg" alt="Sullair"
+                             style="max-width:140px;width:100%;height:65px;object-fit:contain;" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 mb-4">
+                        <img src="img/logo-ingersoll.svg" alt="Ingersoll Rand"
+                             style="max-width:140px;width:100%;height:65px;object-fit:contain;" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 mb-4">
+                        <img src="img/logo-quincy.svg" alt="Quincy Compressor"
+                             style="max-width:140px;width:100%;height:65px;object-fit:contain;" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 mb-4">
+                        <img src="img/logo-worthington.svg" alt="Worthington"
+                             style="max-width:140px;width:100%;height:65px;object-fit:contain;" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 mb-4">
+                        <img src="img/logo-cetec.svg" alt="Cetec"
+                             style="max-width:140px;width:100%;height:65px;object-fit:contain;" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 mb-4">
+                        <img src="img/logo-gardnerdenver.svg" alt="Gardner Denver"
+                             style="max-width:140px;width:100%;height:65px;object-fit:contain;" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Marcas Strip End -->
+
+
+        <!-- CTA Section Start -->
+        <div class="cta-comp wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <h2>¿Necesitás un Compresor para tu Empresa?</h2>
+                <p>Consultanos sin cargo — te asesoramos y preparamos un presupuesto a medida.</p>
+                <div>
+                    <a href="https://wha.link/eE9y0e" class="btn-dark-comp" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-whatsapp" style="margin-right:8px;"></i> Consultar por WhatsApp
+                    </a>
+                    <a href="contact.html" class="btn-outline-comp">
+                        <i class="fas fa-envelope" style="margin-right:8px;"></i> Enviar Consulta
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- CTA Section End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-contact">
+                            <h2>Nuestros Contactos</h2>
+                            <p><i class="fa fa-map-marker-alt"></i> Astarita 1950, Marcos Paz, Buenos Aires, Argentina</p>
+                            <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank" class="cel"><i class="fa fa-phone-alt"></i> 1154674299</a>
+                            <p><i class="fa fa-envelope"></i> servitec.tec@hotmail.com</p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Twitter de SERVITEC"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Facebook de SERVITEC"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram de SERVITEC"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn de SERVITEC"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-link">
+                            <h2>Nuestras Páginas</h2>
+                            <a href="./index.html">Inicio</a>
+                            <a href="./about.html">Quiénes Somos</a>
+                            <a href="./service.html">Servicios</a>
+                            <a href="./blog.html">Compresores</a>
+                            <a href="./single.html">Repuestos</a>
+                            <a href="./contact.html">Contacto</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="newsletter">
+                            <h2>Nuestras Novedades</h2>
+                            <p>Recibí información sobre equipos y servicio técnico</p>
+                            <div class="form">
+                                <input class="form-control" type="email" placeholder="tu@email.com" aria-label="Tu dirección de email">
+                                <button class="btn" type="submit">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
 </html>

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="utf-8">
-    <title>SERVITEC</title>
+    <title>Servicio Técnico de Compresores — SERVITEC</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Construction Company Website Template" name="keywords">
-    <meta content="Construction Company Website Template" name="description">
+    <meta content="servicio técnico compresores, mantenimiento compresores industriales, reparación compresores, Buenos Aires" name="keywords">
+    <meta content="Servicio técnico especializado en compresores industriales. Mantenimiento preventivo y correctivo, diagnóstico de fallas, repuestos y soporte 24/7 en Buenos Aires." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -26,10 +28,259 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Intro section */
+        .servicio-intro {
+            padding: 60px 0;
+            background: #ffffff;
+        }
+        .servicio-intro p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.85;
+            margin-bottom: 15px;
+        }
+        .servicio-intro .marcas-highlight {
+            display: inline-block;
+            background: #fdbe33;
+            color: #030f27;
+            font-weight: 700;
+            padding: 2px 8px;
+            margin: 2px 3px;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        /* Servicios list section */
+        .servicios-lista {
+            padding: 60px 0;
+            background: #f5f5f5;
+        }
+        .servicio-lista-item {
+            display: flex;
+            align-items: flex-start;
+            background: #ffffff;
+            border-left: 4px solid #fdbe33;
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            transition: transform .3s, box-shadow .3s;
+        }
+        .servicio-lista-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+        }
+        .servicio-lista-item .s-icon {
+            width: 55px;
+            height: 55px;
+            min-width: 55px;
+            background: #fdbe33;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        .servicio-lista-item .s-icon i {
+            font-size: 22px;
+            color: #030f27;
+        }
+        .servicio-lista-item h4 {
+            color: #030f27;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .servicio-lista-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* FAQ section */
+        .faqs .card {
+            border: none;
+            border-bottom: 1px solid #eee;
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+        .faqs .card-header {
+            background: #fff;
+            border: none;
+            padding: 0;
+        }
+        .faqs .card-link {
+            display: block;
+            padding: 15px 20px;
+            color: #030f27;
+            font-weight: 600;
+            font-size: 14px;
+            border-left: 3px solid transparent;
+            transition: .3s;
+        }
+        .faqs .card-link:not(.collapsed) {
+            color: #030f27;
+            border-left: 3px solid #fdbe33;
+            background: #fffdf5;
+        }
+        .faqs .card-link::after {
+            content: '\f067';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            float: right;
+            color: #fdbe33;
+        }
+        .faqs .card-link:not(.collapsed)::after {
+            content: '\f068';
+        }
+        .faqs .card-body {
+            padding: 15px 20px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* Service cards grid — uniform height */
+        .service > .container > .row {
+            justify-content: center;
+        }
+        .service-item {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-img {
+            position: relative;
+            overflow: hidden;
+            height: 240px;
+            flex-shrink: 0;
+        }
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        .service-img .service-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(3, 15, 39, 0.82);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .service-item:hover .service-overlay {
+            opacity: 1;
+        }
+        .service-overlay p {
+            color: #fff;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: center;
+            margin: 0;
+        }
+        .service-text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: #030f27;
+            flex-grow: 1;
+        }
+        .service-text h3 {
+            color: #fdbe33;
+            font-size: 15px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.3;
+        }
+        .service-text .btn {
+            background: #fdbe33;
+            color: #030f27;
+            font-weight: 900;
+            font-size: 18px;
+            padding: 0;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 0;
+            line-height: 1;
+        }
+        .service-text .btn:hover {
+            background: #fff;
+        }
+        .col-lg-4.col-md-6 {
+            margin-bottom: 28px;
+        }
+
+        /* CTA banner */
+        .cta-servicio {
+            padding: 65px 0;
+            background: #030f27;
+            text-align: center;
+        }
+        .cta-servicio h2 {
+            color: #fdbe33;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .cta-servicio p {
+            color: #cccccc;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .btn-cta-yellow {
+            background: #fdbe33;
+            color: #030f27;
+            padding: 14px 38px;
+            font-size: 15px;
+            font-weight: 700;
+            border: 2px solid #fdbe33;
+            border-radius: 0;
+            display: inline-block;
+            text-decoration: none;
+            transition: .3s;
+            margin: 5px 8px;
+        }
+        .btn-cta-yellow:hover {
+            background: transparent;
+            color: #fdbe33;
+            text-decoration: none;
+        }
+        .btn-cta-outline {
+            background: transparent;
+            color: #ffffff;
+            padding: 14px 38px;
+            font-size: 15px;
+            font-weight: 600;
+            border: 2px solid #ffffff;
+            border-radius: 0;
+            display: inline-block;
+            text-decoration: none;
+            transition: .3s;
+            margin: 5px 8px;
+        }
+        .btn-cta-outline:hover {
+            background: #ffffff;
+            color: #030f27;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
     <div class="wrapper">
+
         <!-- Top Bar Start -->
         <div class="top-bar">
             <div class="container-fluid">
@@ -38,7 +289,6 @@
                         <div class="logo">
                             <a href="index.html">
                                 <h1>SERVITEC</h1>
-                                <!-- <img src="img/logo.jpg" alt="Logo"> -->
                             </a>
                         </div>
                     </div>
@@ -61,8 +311,8 @@
                                         <i class="flaticon-call"></i>
                                     </div>
                                     <div class="top-bar-text">
-                                        <h3>Nuestros telefonos</h3>
-                                        <a href="https://wha.link/eE9y0e">1154674299</a>
+                                        <h3>Nuestro Teléfono</h3>
+                                        <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank">1154674299</a>
                                     </div>
                                 </div>
                             </div>
@@ -72,8 +322,8 @@
                                         <i class="flaticon-send-mail"></i>
                                     </div>
                                     <div class="top-bar-text">
-                                        <h3>Nuestos Mail</h3>
-                                        <p>servitec@gmail.com</p>
+                                        <h3>Nuestro Mail</h3>
+                                        <p>servitec.tec@hotmail.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +334,7 @@
         </div>
         <!-- Top Bar End -->
 
-          <!-- Nav Bar Start -->
+        <!-- Nav Bar Start -->
         <div class="nav-bar">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -92,359 +342,442 @@
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto">
-                            <a href="index.html" class="nav-item nav-link active">inicio</a>
-                            <a href="about.html" class="nav-item nav-link">Quienes Somos</a>
-                            <a href="service.html" class="nav-item nav-link">servicios</a>
-                            <a href="team.html" class="nav-item nav-link">Nuestro Equipo</a>
-                            <a href="portfolio.html" class="nav-item nav-link">Nuestros trabajos</a>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-item nav-link">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link">Quiénes Somos</a>
+                            <a href="service.html" class="nav-item nav-link active">Servicios</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">venta de equipos</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Venta de Equipos</a>
                                 <div class="dropdown-menu">
                                     <a href="blog.html" class="dropdown-item">Compresores</a>
-                                    <a href="single.html" class="dropdown-item">Respuestos</a>
-                                    <a href="single.html" class="dropdown-item">bombas</a>
+                                    <a href="single.html" class="dropdown-item">Repuestos</a>
+                                    <a href="alquiler.html" class="dropdown-item">Alquiler y Venta</a>
                                 </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contacto</a>
-
                         </div>
+                    </div>
                 </nav>
             </div>
         </div>
         <!-- Nav Bar End -->
-            
-            
-            <!-- Page Header Start -->
-            <div class="page-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Our Services</h2>
-                        </div>
-                        <div class="col-12">
-                            <a href="">Home</a>
-                            <a href="">Our Services</a>
-                        </div>
+
+
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Servicio Técnico</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="index.html">Inicio</a>
+                        <a href="service.html">Servicio Técnico</a>
                     </div>
                 </div>
             </div>
-            <!-- Page Header End -->
+        </div>
+        <!-- Page Header End -->
 
 
-            <!-- Service Start -->
-            <div class="service">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Our Services</p>
-                        <h2>We Provide Services</h2>
+        <!-- Intro Section Start -->
+        <div class="servicio-intro wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="section-header text-left">
+                            <p>15 años especializados en compresores industriales</p>
+                            <h2>Un Buen Servicio Técnico es Esencial</h2>
+                        </div>
+                        <p>
+                            Cuando un compresor falla, cada minuto de parada cuesta dinero. En <strong>SERVITEC</strong> contamos con técnicos altamente capacitados y más de 15 años de experiencia, ofreciendo soluciones rápidas y definitivas para maximizar la eficiencia y vida útil de tus equipos.
+                        </p>
+                        <p>
+                            Realizamos servicio técnico para todas las marcas del mercado:
+                            <span class="marcas-highlight">SULLAIR</span>
+                            <span class="marcas-highlight">KAESER</span>
+                            <span class="marcas-highlight">ATLAS COPCO</span>
+                            <span class="marcas-highlight">CETEC</span>
+                            <span class="marcas-highlight">WORTHINGTON</span>
+                            <span class="marcas-highlight">INGERSOLL RAND</span>
+                            <span class="marcas-highlight">QUINCY</span>
+                            y más.
+                        </p>
+                        <p>
+                            Nuestro enfoque preventivo reduce los costos de reparación y garantiza la continuidad operativa de tu planta. Cubrimos toda la zona de Buenos Aires y trabajamos fuera de provincia con cotización especial.
+                        </p>
+                        <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank"
+                           style="background:#fdbe33;color:#030f27;border:2px solid #fdbe33;border-radius:0;padding:12px 28px;font-weight:700;display:inline-block;text-decoration:none;transition:.3s;">
+                            <i class="fab fa-whatsapp" style="margin-right:6px;"></i> Consultar Ahora
+                        </a>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="img/service-1.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Building Construction</h3>
-                                    <a class="btn" href="img/service-1.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="img/service-2.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>House Renovation</h3>
-                                    <a class="btn" href="img/service-2.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="img/service-3.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Architecture Design</h3>
-                                    <a class="btn" href="img/service-3.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="img/service-4.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Interior Design</h3>
-                                    <a class="btn" href="img/service-4.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="img/service-5.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Fixing & Support</h3>
-                                    <a class="btn" href="img/service-5.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="img/service-6.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Painting</h3>
-                                    <a class="btn" href="img/service-6.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-lg-6">
+                        <img src="img/compresordeairexafamyc.png"
+                             alt="Compresor industrial en servicio técnico SERVITEC"
+                             loading="lazy"
+                             style="width:100%;height:auto;border-top:4px solid #fdbe33;box-shadow:0 4px 20px rgba(0,0,0,0.12);">
                     </div>
                 </div>
             </div>
-            <!-- Service End -->
-            
-            
-            <!-- FAQs Start -->
-            <div class="faqs">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Frequently Asked Question</p>
-                        <h2>You May Ask</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div id="accordion-1">
-                                <div class="card wow fadeInLeft" data-wow-delay="0.1s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
-                                            Lorem ipsum dolor sit amet?
-                                        </a>
-                                    </div>
-                                    <div id="collapseOne" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.2s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo">
-                                            Lorem ipsum dolor sit amet?
-                                        </a>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.3s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree">
-                                            Lorem ipsum dolor sit amet?
-                                        </a>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.4s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour">
-                                            Lorem ipsum dolor sit amet?
-                                        </a>
-                                    </div>
-                                    <div id="collapseFour" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.5s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFive">
-                                            Lorem ipsum dolor sit amet?
-                                        </a>
-                                    </div>
-                                    <div id="collapseFive" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
-                                    </div>
+        </div>
+        <!-- Intro Section End -->
+
+
+        <!-- Gallery / Service Cards Start -->
+        <div class="service wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Lo que hacemos</p>
+                    <h2>Nuestros Trabajos en Acción</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 d-flex wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item w-100">
+                            <div class="service-img">
+                                <img src="img/historia.jpeg" alt="Mantenimiento preventivo de compresores industriales" loading="lazy">
+                                <div class="service-overlay">
+                                    <p>Mantenimiento preventivo programado: cambio de aceite, filtros, correas y rodamientos. Evitá paradas inesperadas.</p>
                                 </div>
                             </div>
+                            <div class="service-text">
+                                <h3>Mantenimiento Preventivo</h3>
+                                <a class="btn" href="img/historia.jpeg" data-lightbox="service">+</a>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <div id="accordion-2">
-                                <div class="card wow fadeInRight" data-wow-delay="0.1s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix">
-                                            Lorem ipsum dolor sit amet?
-                                        </a>
-                                    </div>
-                                    <div id="collapseSix" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item w-100">
+                            <div class="service-img">
+                                <img src="img/WhatsApp Image 2025-12-04 at 8.55.25 AM.jpeg" alt="Reparación y diagnóstico de compresores industriales" loading="lazy">
+                                <div class="service-overlay">
+                                    <p>Diagnóstico preciso de fallas en compresores a tornillo y de pistón. Reparación en sitio — mismo día en la mayoría de los casos.</p>
                                 </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.2s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSeven">
-                                            Lorem ipsum dolor sit amet?
-                                        </a>
-                                    </div>
-                                    <div id="collapseSeven" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="service-text">
+                                <h3>Reparación y Diagnóstico</h3>
+                                <a class="btn" href="img/WhatsApp Image 2025-12-04 at 8.55.25 AM.jpeg" data-lightbox="service">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item w-100">
+                            <div class="service-img">
+                                <img src="img/portada.jpeg" alt="Instalación y puesta en marcha de compresores industriales" loading="lazy">
+                                <div class="service-overlay">
+                                    <p>Instalación profesional: conexiones de aire y eléctricas, puesta en marcha, calibración de presión y capacitación al operario.</p>
                                 </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.3s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseEight">
-                                            Lorem ipsum dolor sit amet?
-                                        </a>
-                                    </div>
-                                    <div id="collapseEight" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="service-text">
+                                <h3>Instalación y Puesta en Marcha</h3>
+                                <a class="btn" href="img/portada.jpeg" data-lightbox="service">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item w-100">
+                            <div class="service-img">
+                                <img src="img/COMPRESORACORREAM.png" alt="Cambio de filtros y lubricantes para compresores" loading="lazy">
+                                <div class="service-overlay">
+                                    <p>Cambio de filtros de aire, aceite y separadores. Lubricantes especializados. Stock permanente para todas las marcas.</p>
                                 </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.4s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseNine">
-                                            Lorem ipsum dolor sit amet?
-                                        </a>
-                                    </div>
-                                    <div id="collapseNine" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="service-text">
+                                <h3>Cambio de Filtros y Lubricantes</h3>
+                                <a class="btn" href="img/COMPRESORACORREAM.png" data-lightbox="service">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item w-100">
+                            <div class="service-img">
+                                <img src="img/100EPM2-3-e1764164132893.png" alt="Revisión eléctrica y tableros de control de compresores" loading="lazy">
+                                <div class="service-overlay">
+                                    <p>Inspección de tableros de control, variadores de frecuencia, sensores y electroválvulas. Diagnóstico con instrumental calibrado.</p>
                                 </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.5s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTen">
-                                            Lorem ipsum dolor sit amet?
-                                        </a>
-                                    </div>
-                                    <div id="collapseTen" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="service-text">
+                                <h3>Revisión Eléctrica y Tableros</h3>
+                                <a class="btn" href="img/100EPM2-3-e1764164132893.png" data-lightbox="service">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item w-100">
+                            <div class="service-img">
+                                <img src="img/compresoratornillolibredeaceite-768x693.png" alt="Reconstrucción de grupos tornillo y cabezales de compresor" loading="lazy">
+                                <div class="service-overlay">
+                                    <p>Reconstrucción de grupos tornillo, cabezales y bloques de pistón con tolerancias de fábrica. Garantía de trabajo incluida.</p>
                                 </div>
+                            </div>
+                            <div class="service-text">
+                                <h3>Reconstrucción de Equipos</h3>
+                                <a class="btn" href="img/compresoratornillolibredeaceite-768x693.png" data-lightbox="service">+</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- FAQs End -->
+        </div>
+        <!-- Gallery / Service Cards End -->
 
 
-            <!-- Footer Start -->
+        <!-- Servicios Lista Start -->
+        <div class="servicios-lista">
+            <div class="container">
+                <div class="section-header text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <p>Todo lo que necesitás en un solo lugar</p>
+                    <h2>Nuestros Servicios de Soporte Técnico Incluyen</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="servicio-lista-item wow fadeInLeft" data-wow-delay="0.1s">
+                            <div class="s-icon"><i class="fas fa-clipboard-list"></i></div>
+                            <div>
+                                <h4>Planes de Mantenimiento Personalizados</h4>
+                                <p>Diseñamos un plan de mantenimiento preventivo ajustado a las horas de trabajo, el ambiente y las necesidades específicas de tu equipo, para que nunca pares la producción.</p>
+                            </div>
+                        </div>
+                        <div class="servicio-lista-item wow fadeInLeft" data-wow-delay="0.2s">
+                            <div class="s-icon"><i class="fas fa-search"></i></div>
+                            <div>
+                                <h4>Visitas Técnicas y Diagnóstico de Fallas</h4>
+                                <p>Realizamos visitas periódicas programadas y evaluaciones del estado del equipo. Detectamos problemas antes de que se conviertan en paradas costosas.</p>
+                            </div>
+                        </div>
+                        <div class="servicio-lista-item wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="s-icon"><i class="fas fa-cogs"></i></div>
+                            <div>
+                                <h4>Repuestos Originales y Alternativos</h4>
+                                <p>Contamos con stock permanente de repuestos para las principales marcas del mercado: filtros, válvulas, lubricantes, rodamientos y más — con entrega inmediata.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="servicio-lista-item wow fadeInRight" data-wow-delay="0.1s">
+                            <div class="s-icon"><i class="fas fa-bolt"></i></div>
+                            <div>
+                                <h4>Respuesta Rápida ante Emergencias</h4>
+                                <p>Disponibles las 24 horas, los 7 días de la semana. Cuando tu compresor falla en el momento menos esperado, nuestros técnicos se movilizan para resolver el problema lo antes posible.</p>
+                            </div>
+                        </div>
+                        <div class="servicio-lista-item wow fadeInRight" data-wow-delay="0.2s">
+                            <div class="s-icon"><i class="fas fa-tools"></i></div>
+                            <div>
+                                <h4>Mano de Obra Calificada y Herramientas de Última Generación</h4>
+                                <p>Nuestros técnicos están en constante capacitación y utilizan equipos de diagnóstico modernos para garantizar trabajos de máxima calidad y durabilidad.</p>
+                            </div>
+                        </div>
+                        <div class="servicio-lista-item wow fadeInRight" data-wow-delay="0.3s">
+                            <div class="s-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Cobertura en Todo Buenos Aires</h4>
+                                <p>Llegamos a toda la zona de Buenos Aires — oeste, sur, norte y este. También realizamos trabajos fuera de provincia con cotización especial para tu proyecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Servicios Lista End -->
+
+
+        <!-- FAQ Section Start -->
+        <div class="faqs wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Preguntas frecuentes</p>
+                    <h2>Lo Que Más Nos Consultan</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="accordion-1">
+                            <div class="card wow fadeInLeft" data-wow-delay="0.1s">
+                                <div class="card-header">
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
+                                        ¿Con qué frecuencia debo hacer el mantenimiento de mi compresor?
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="collapse" data-parent="#accordion-1">
+                                    <div class="card-body">
+                                        Depende del modelo y las horas de uso, pero en general se recomienda un mantenimiento cada 500/1000 horas de trabajo. Nosotros evaluamos tu equipo y diseñamos un plan personalizado sin costo adicional.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card wow fadeInLeft" data-wow-delay="0.2s">
+                                <div class="card-header">
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo">
+                                        ¿Cuánto tarda una reparación de emergencia?
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
+                                    <div class="card-body">
+                                        Nuestro tiempo de respuesta ante emergencias es de pocas horas. En la mayoría de los casos resolvemos el problema en el mismo día, especialmente si el repuesto está en stock.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card wow fadeInLeft" data-wow-delay="0.3s">
+                                <div class="card-header">
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree">
+                                        ¿Trabajan con todas las marcas de compresores?
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="collapse" data-parent="#accordion-1">
+                                    <div class="card-body">
+                                        Sí. Trabajamos con Kaeser, Atlas Copco, Sullair, Ingersoll Rand, Worthington, Cetec, Quincy y muchas más. Si tenés una marca específica consultanos, que con 15 años de experiencia casi seguro lo cubrimos.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card wow fadeInLeft" data-wow-delay="0.4s">
+                                <div class="card-header">
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour">
+                                        ¿Ofrecen garantía sobre los trabajos realizados?
+                                    </a>
+                                </div>
+                                <div id="collapseFour" class="collapse" data-parent="#accordion-1">
+                                    <div class="card-body">
+                                        Sí. Todos nuestros trabajos tienen garantía de mano de obra. Los repuestos cuentan con la garantía del fabricante. Consultanos por los detalles según el tipo de trabajo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="accordion-2">
+                            <div class="card wow fadeInRight" data-wow-delay="0.1s">
+                                <div class="card-header">
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#collapseFive">
+                                        ¿Cómo sé si mi compresor necesita mantenimiento?
+                                    </a>
+                                </div>
+                                <div id="collapseFive" class="collapse" data-parent="#accordion-2">
+                                    <div class="card-body">
+                                        Señales comunes: ruidos anormales, pérdida de presión, aumento de temperatura, consumo eléctrico elevado o aceite en el aire. Si notás alguno de estos síntomas, contactanos de inmediato antes de que el problema sea mayor.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card wow fadeInRight" data-wow-delay="0.2s">
+                                <div class="card-header">
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix">
+                                        ¿Dan presupuesto sin costo?
+                                    </a>
+                                </div>
+                                <div id="collapseSix" class="collapse" data-parent="#accordion-2">
+                                    <div class="card-body">
+                                        Sí, el presupuesto es completamente sin cargo. Podés consultarnos por WhatsApp, mail o teléfono y te respondemos en el día con todos los detalles del trabajo y el costo.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                                <div class="card-header">
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#collapseSeven">
+                                        ¿Cubren toda la provincia de Buenos Aires?
+                                    </a>
+                                </div>
+                                <div id="collapseSeven" class="collapse" data-parent="#accordion-2">
+                                    <div class="card-body">
+                                        Sí. Cubrimos toda la zona de Buenos Aires: GBA oeste, sur, norte y este. También realizamos trabajos fuera de provincia con cotización especial. Consultanos tu ubicación.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card wow fadeInRight" data-wow-delay="0.4s">
+                                <div class="card-header">
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#collapseEight">
+                                        ¿Usan repuestos originales o alternativos?
+                                    </a>
+                                </div>
+                                <div id="collapseEight" class="collapse" data-parent="#accordion-2">
+                                    <div class="card-body">
+                                        Trabajamos con ambos según la preferencia del cliente. Los repuestos originales garantizan compatibilidad total. Los alternativos de calidad son una opción económica sin sacrificar rendimiento. Siempre te asesoramos sobre la mejor opción.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ Section End -->
+
+
+        <!-- CTA Section Start -->
+        <div class="cta-servicio wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <h2>¿Tu Compresor Necesita Servicio Técnico?</h2>
+                <p>Contactanos hoy y te damos una solución rápida. Presupuesto sin cargo — respuesta en minutos.</p>
+                <div>
+                    <a href="https://wha.link/eE9y0e" class="btn-cta-yellow" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-whatsapp" style="margin-right:7px;"></i> Escribir por WhatsApp
+                    </a>
+                    <a href="contact.html" class="btn-cta-outline">
+                        <i class="fas fa-envelope" style="margin-right:7px;"></i> Enviar Consulta
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- CTA Section End -->
+
+
         <!-- Footer Start -->
         <div class="footer wow fadeIn" data-wow-delay="0.3s">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-3 ">
-                <div class="footer-contact">
-                    <h2>Nuestros Contactos</h2>
-                    <p><i class="fa fa-map-marker-alt"></i>Astarita 1950, Marcos Paz, Buenos Aires, Argentina</p>
-                    <a><i class="fa fa-phone-alt"></i></a><a href="https://wha.link/eE9y0e" class="cel">     1154674299</a>
-                    <p><i class="fa fa-envelope"></i>servitec@gmail.com</p>
-                    <div class="footer-social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-contact">
+                            <h2>Nuestros Contactos</h2>
+                            <p><i class="fa fa-map-marker-alt"></i> Astarita 1950, Marcos Paz, Buenos Aires, Argentina</p>
+                            <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank" class="cel"><i class="fa fa-phone-alt"></i> 1154674299</a>
+                            <p><i class="fa fa-envelope"></i> servitec.tec@hotmail.com</p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Twitter de SERVITEC"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Facebook de SERVITEC"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram de SERVITEC"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn de SERVITEC"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 ">
-                <div class="footer-link">
-                    <h2>Nuestras Paginas</h2>
-                    <a href="./index.html">Inicio</a>
-                    <a href="./contact.html">Contacto</a>
-                    <a href="./team.html">Nuestro Equipo</a>
-                    <a href="./blog.html">venta de equipos</a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 ">
-                <div class="newsletter">
-                    <h2> Nuestras Novedades</h2>
-                    <p> recibi toda nuestra informacion sobre equipos y servicio Tecnico </p>
-                    <div class="form">
-                        <input class="form-control" placeholder="mail">
-                        <button class="btn">Enviar</button>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-link">
+                            <h2>Nuestras Páginas</h2>
+                            <a href="./index.html">Inicio</a>
+                            <a href="./service.html">Servicios</a>
+                            <a href="./single.html">Repuestos</a>
+                            <a href="./blog.html">Compresores</a>
+                            <a href="./contact.html">Contacto</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="newsletter">
+                            <h2>Nuestras Novedades</h2>
+                            <p>Recibí información sobre equipos y servicio técnico</p>
+                            <div class="form">
+                                <input class="form-control" type="email" placeholder="tu@email.com" aria-label="Tu dirección de email">
+                                <button class="btn" type="submit">Enviar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     </div>
-</div>
-            <!-- Footer End -->
 
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-        </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
 </html>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#030f27"/>
+      <stop offset="100%" style="stop-color:#051a20"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg3)"/>
+  <!-- floor -->
+  <rect x="0" y="310" width="600" height="90" fill="#040e20"/>
+  <line x1="0" y1="310" x2="600" y2="310" stroke="#fdbe33" stroke-width="2"/>
+  <!-- floor tiles -->
+  <line x1="100" y1="310" x2="100" y2="400" stroke="#0a2050" stroke-width="1"/>
+  <line x1="200" y1="310" x2="200" y2="400" stroke="#0a2050" stroke-width="1"/>
+  <line x1="300" y1="310" x2="300" y2="400" stroke="#0a2050" stroke-width="1"/>
+  <line x1="400" y1="310" x2="400" y2="400" stroke="#0a2050" stroke-width="1"/>
+  <line x1="500" y1="310" x2="500" y2="400" stroke="#0a2050" stroke-width="1"/>
+
+  <!-- COMPRESSOR INSTALLED - center -->
+  <rect x="160" y="160" width="220" height="150" rx="10" fill="#0a2050" stroke="#fdbe33" stroke-width="3"/>
+  <rect x="160" y="160" width="220" height="40" rx="10" fill="#fdbe33"/>
+  <rect x="160" y="188" width="220" height="12" fill="#fdbe33"/>
+  <text x="270" y="183" font-family="Arial Black,Arial" font-weight="900" font-size="11" fill="#030f27" text-anchor="middle">COMPRESOR KAESER</text>
+  <!-- serial badge -->
+  <rect x="185" y="205" width="80" height="40" rx="4" fill="#040d1e" stroke="#1a3a6b" stroke-width="1"/>
+  <text x="225" y="221" font-family="Arial,sans-serif" font-size="8" fill="#aaa" text-anchor="middle">SERIE: SK-25</text>
+  <text x="225" y="234" font-family="Arial Black,Arial" font-weight="900" font-size="10" fill="#fdbe33" text-anchor="middle">2.5 m³/min</text>
+  <text x="225" y="245" font-family="Arial,sans-serif" font-size="8" fill="#aaa" text-anchor="middle">10 bar — 15kW</text>
+  <!-- Green ONLINE light -->
+  <circle cx="295" cy="215" r="10" fill="#00cc66"/>
+  <circle cx="295" cy="215" r="6" fill="#00ff88"/>
+  <text x="315" y="219" font-family="Arial Black,Arial" font-weight="900" font-size="10" fill="#00cc66">ONLINE</text>
+  <!-- vents -->
+  <rect x="280" y="235" width="12" height="50" rx="2" fill="#051a3e" stroke="#1a3a6b" stroke-width="1"/>
+  <rect x="298" y="235" width="12" height="50" rx="2" fill="#051a3e" stroke="#1a3a6b" stroke-width="1"/>
+  <rect x="316" y="235" width="12" height="50" rx="2" fill="#051a3e" stroke="#1a3a6b" stroke-width="1"/>
+  <!-- feet bolts -->
+  <rect x="170" y="305" width="20" height="8" rx="2" fill="#fdbe33"/>
+  <rect x="350" y="305" width="20" height="8" rx="2" fill="#fdbe33"/>
+  <circle cx="180" cy="309" r="3" fill="#030f27"/>
+  <circle cx="360" cy="309" r="3" fill="#030f27"/>
+
+  <!-- AIR PIPES running from compressor -->
+  <!-- main pipe right -->
+  <rect x="380" y="195" width="180" height="22" rx="4" fill="#1a3a6b" stroke="#fdbe33" stroke-width="1.5"/>
+  <!-- down pipe at wall -->
+  <rect x="538" y="195" width="22" height="115" rx="4" fill="#1a3a6b" stroke="#fdbe33" stroke-width="1.5"/>
+  <!-- branch -->
+  <rect x="440" y="195" width="22" height="50" rx="4" fill="#1a3a6b" stroke="#fdbe33" stroke-width="1.5"/>
+  <!-- air outlet arrow -->
+  <polygon points="500,182 516,200 484,200" fill="#fdbe33" opacity="0.8"/>
+  <text x="500" y="178" font-family="Arial,sans-serif" font-size="8" fill="#fdbe33" text-anchor="middle">AIRE</text>
+  <!-- connections -->
+  <circle cx="462" cy="217" r="8" fill="#fdbe33"/>
+  <circle cx="549" cy="217" r="8" fill="#fdbe33"/>
+
+  <!-- left pipe to dryer -->
+  <rect x="40" y="195" width="120" height="22" rx="4" fill="#1a3a6b" stroke="#fdbe33" stroke-width="1.5"/>
+  <!-- DRYER unit -->
+  <rect x="40" y="130" width="80" height="90" rx="8" fill="#0a2050" stroke="#4a8aff" stroke-width="2"/>
+  <text x="80" y="152" font-family="Arial,sans-serif" font-size="8" fill="#4a8aff" text-anchor="middle">SECADOR</text>
+  <text x="80" y="163" font-family="Arial,sans-serif" font-size="8" fill="#4a8aff" text-anchor="middle">DE AIRE</text>
+  <!-- dryer snowflake -->
+  <line x1="80" y1="175" x2="80" y2="205" stroke="#4a8aff" stroke-width="2"/>
+  <line x1="65" y1="190" x2="95" y2="190" stroke="#4a8aff" stroke-width="2"/>
+  <line x1="68" y1="178" x2="92" y2="202" stroke="#4a8aff" stroke-width="1.5"/>
+  <line x1="92" y1="178" x2="68" y2="202" stroke="#4a8aff" stroke-width="1.5"/>
+  <circle cx="80" cy="190" r="4" fill="#4a8aff"/>
+
+  <!-- ELECTRICAL PANEL left wall -->
+  <rect x="520" y="80" width="65" height="100" rx="5" fill="#0a1830" stroke="#fdbe33" stroke-width="2"/>
+  <text x="552" y="98" font-family="Arial,sans-serif" font-size="8" fill="#fdbe33" text-anchor="middle">TABLERO</text>
+  <rect x="530" y="105" width="45" height="30" rx="3" fill="#040d1e" stroke="#1a3a6b" stroke-width="1"/>
+  <circle cx="548" cy="120" r="6" fill="#00cc66"/>
+  <circle cx="568" cy="120" r="6" fill="#fdbe33"/>
+  <rect x="530" y="143" width="20" height="28" rx="2" fill="#1a3a6b"/>
+  <rect x="556" y="143" width="20" height="28" rx="2" fill="#1a3a6b"/>
+  <!-- electric cable -->
+  <path d="M520 130 Q490 130 490 175 Q490 215 380 215" stroke="#fdbe33" stroke-width="2" fill="none" stroke-dasharray="6,3"/>
+
+  <!-- TECHNICIAN figure (simplified) -->
+  <circle cx="470" cy="255" r="16" fill="#fdbe33"/>
+  <text x="470" y="261" font-family="Arial Black,Arial" font-weight="900" font-size="12" fill="#030f27" text-anchor="middle">T</text>
+  <rect x="456" y="271" width="28" height="40" rx="4" fill="#1a3a6b"/>
+  <rect x="448" y="275" width="12" height="28" rx="4" fill="#1a3a6b"/>
+  <rect x="480" y="275" width="12" height="28" rx="4" fill="#1a3a6b"/>
+  <rect x="456" y="308" width="11" height="18" rx="3" fill="#0a2050"/>
+  <rect x="473" y="308" width="11" height="18" rx="3" fill="#0a2050"/>
+  <!-- clipboard in hand -->
+  <rect x="490" y="278" width="22" height="28" rx="2" fill="#fff"/>
+  <line x1="494" y1="286" x2="508" y2="286" stroke="#030f27" stroke-width="1.5"/>
+  <line x1="494" y1="292" x2="508" y2="292" stroke="#030f27" stroke-width="1.5"/>
+  <line x1="494" y1="298" x2="504" y2="298" stroke="#fdbe33" stroke-width="1.5"/>
+
+  <!-- Status badges bottom -->
+  <rect x="60" y="330" width="140" height="30" rx="5" fill="#00cc66" fill-opacity="0.15" stroke="#00cc66" stroke-width="1.5"/>
+  <text x="130" y="350" font-family="Arial Black,Arial" font-weight="900" font-size="10" fill="#00cc66" text-anchor="middle">✔ INSTALADO</text>
+  <rect x="220" y="330" width="160" height="30" rx="5" fill="#fdbe33" fill-opacity="0.15" stroke="#fdbe33" stroke-width="1.5"/>
+  <text x="300" y="350" font-family="Arial Black,Arial" font-weight="900" font-size="10" fill="#fdbe33" text-anchor="middle">✔ PUESTA EN MARCHA</text>
+  <rect x="400" y="330" width="160" height="30" rx="5" fill="#4a8aff" fill-opacity="0.15" stroke="#4a8aff" stroke-width="1.5"/>
+  <text x="480" y="350" font-family="Arial Black,Arial" font-weight="900" font-size="10" fill="#4a8aff" text-anchor="middle">✔ OPERADOR CAPACITADO</text>
+
+  <!-- Title top -->
+  <text x="30" y="40" font-family="Arial Black,Arial" font-weight="900" font-size="16" fill="#fdbe33">INSTALACIÓN Y PUESTA EN MARCHA</text>
+  <text x="30" y="60" font-family="Arial,sans-serif" font-size="11" fill="#aaa">Instalación profesional — Conexiones de aire y eléctricas — Prueba de caudal y presión</text>
+  <line x1="30" y1="68" x2="570" y2="68" stroke="#fdbe33" stroke-width="1.5" opacity="0.4"/>
+</svg>

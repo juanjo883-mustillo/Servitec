@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#030f27"/>
+      <stop offset="100%" style="stop-color:#1a0820"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg6)"/>
+
+  <!-- Title -->
+  <text x="30" y="38" font-family="Arial Black,Arial" font-weight="900" font-size="16" fill="#fdbe33">RECONSTRUCCIÓN DE EQUIPOS</text>
+  <text x="30" y="56" font-family="Arial,sans-serif" font-size="11" fill="#aaa">Grupo tornillo · Cabezales de pistón · Reconstrucción completa con garantía</text>
+  <line x1="30" y1="65" x2="570" y2="65" stroke="#fdbe33" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- WORK TABLE -->
+  <rect x="30" y="290" width="540" height="15" rx="3" fill="#1a3a6b" stroke="#fdbe33" stroke-width="1.5"/>
+  <rect x="50" y="302" width="20" height="60" rx="3" fill="#1a3a6b"/>
+  <rect x="530" y="302" width="20" height="60" rx="3" fill="#1a3a6b"/>
+
+  <!-- SCREW ROTOR (main piece being rebuilt) - center -->
+  <g transform="translate(220,90)">
+    <!-- main rotor shaft -->
+    <rect x="15" y="30" width="130" height="40" rx="5" fill="#0a2050" stroke="#fdbe33" stroke-width="2"/>
+    <!-- rotor lobes - male -->
+    <ellipse cx="35" cy="50" rx="12" ry="20" fill="#1a3a6b" stroke="#fdbe33" stroke-width="1.5" transform="rotate(-20,35,50)"/>
+    <ellipse cx="60" cy="50" rx="12" ry="20" fill="#1a3a6b" stroke="#fdbe33" stroke-width="1.5" transform="rotate(10,60,50)"/>
+    <ellipse cx="85" cy="50" rx="12" ry="20" fill="#1a3a6b" stroke="#fdbe33" stroke-width="1.5" transform="rotate(-15,85,50)"/>
+    <ellipse cx="110" cy="50" rx="12" ry="20" fill="#1a3a6b" stroke="#fdbe33" stroke-width="1.5" transform="rotate(20,110,50)"/>
+    <!-- shaft ends -->
+    <rect x="0" y="40" width="18" height="20" rx="3" fill="#fdbe33"/>
+    <rect x="142" y="40" width="18" height="20" rx="3" fill="#fdbe33"/>
+    <!-- label -->
+    <text x="80" y="90" font-family="Arial Black,Arial" font-weight="900" font-size="9" fill="#fdbe33" text-anchor="middle">ROTOR MACHO</text>
+    <text x="80" y="102" font-family="Arial,sans-serif" font-size="8" fill="#aaa" text-anchor="middle">Grupo Tornillo — Reconstruido</text>
+
+    <!-- female rotor below -->
+    <rect x="15" y="130" width="130" height="35" rx="5" fill="#051a3e" stroke="#4a8aff" stroke-width="2"/>
+    <ellipse cx="38" cy="148" rx="10" ry="16" fill="#0a2050" stroke="#4a8aff" stroke-width="1.5" transform="rotate(15,38,148)"/>
+    <ellipse cx="63" cy="148" rx="10" ry="16" fill="#0a2050" stroke="#4a8aff" stroke-width="1.5" transform="rotate(-10,63,148)"/>
+    <ellipse cx="88" cy="148" rx="10" ry="16" fill="#0a2050" stroke="#4a8aff" stroke-width="1.5" transform="rotate(20,88,148)"/>
+    <ellipse cx="113" cy="148" rx="10" ry="16" fill="#0a2050" stroke="#4a8aff" stroke-width="1.5" transform="rotate(-15,113,148)"/>
+    <rect x="0" y="138" width="18" height="20" rx="3" fill="#4a8aff"/>
+    <rect x="142" y="138" width="18" height="20" rx="3" fill="#4a8aff"/>
+    <text x="80" y="182" font-family="Arial Black,Arial" font-weight="900" font-size="9" fill="#4a8aff" text-anchor="middle">ROTOR HEMBRA</text>
+    <text x="80" y="194" font-family="Arial,sans-serif" font-size="8" fill="#aaa" text-anchor="middle">Tolerancias calibradas</text>
+
+    <!-- NUEVO badge -->
+    <rect x="110" y="110" width="52" height="20" rx="10" fill="#00cc66"/>
+    <text x="136" y="124" font-family="Arial Black,Arial" font-weight="900" font-size="9" fill="#fff" text-anchor="middle">NUEVO</text>
+  </g>
+
+  <!-- LEFT: BEARING and SEAL parts -->
+  <g transform="translate(40,90)">
+    <!-- bearing ring -->
+    <circle cx="60" cy="55" r="45" fill="none" stroke="#fdbe33" stroke-width="8"/>
+    <circle cx="60" cy="55" r="35" fill="none" stroke="#1a3a6b" stroke-width="3"/>
+    <circle cx="60" cy="55" r="25" fill="#040d1e" stroke="#fdbe33" stroke-width="2"/>
+    <circle cx="60" cy="55" r="12" fill="#fdbe33"/>
+    <circle cx="60" cy="55" r="6" fill="#030f27"/>
+    <!-- balls in bearing -->
+    <circle cx="60" cy="22" r="5" fill="#aaa"/>
+    <circle cx="88" cy="38" r="5" fill="#aaa"/>
+    <circle cx="88" cy="72" r="5" fill="#aaa"/>
+    <circle cx="60" cy="88" r="5" fill="#aaa"/>
+    <circle cx="32" cy="72" r="5" fill="#aaa"/>
+    <circle cx="32" cy="38" r="5" fill="#aaa"/>
+    <text x="60" y="118" font-family="Arial Black,Arial" font-weight="900" font-size="9" fill="#fdbe33" text-anchor="middle">RODAMIENTO</text>
+    <text x="60" y="130" font-family="Arial,sans-serif" font-size="8" fill="#aaa" text-anchor="middle">SKF — Original</text>
+
+    <!-- seal / junta below -->
+    <ellipse cx="60" cy="175" rx="38" ry="14" fill="none" stroke="#cc3300" stroke-width="6"/>
+    <ellipse cx="60" cy="175" rx="25" ry="9" fill="#040d1e" stroke="#fdbe33" stroke-width="2"/>
+    <text x="60" y="200" font-family="Arial Black,Arial" font-weight="900" font-size="9" fill="#cc3300" text-anchor="middle">SELLO MECÁNICO</text>
+    <text x="60" y="212" font-family="Arial,sans-serif" font-size="8" fill="#aaa" text-anchor="middle">Reemplazado</text>
+  </g>
+
+  <!-- RIGHT: BEFORE/AFTER comparison -->
+  <g transform="translate(480,80)">
+    <rect x="0" y="0" width="100" height="210" rx="8" fill="#040d1e" stroke="#fdbe33" stroke-width="1.5"/>
+    <text x="50" y="18" font-family="Arial Black,Arial" font-weight="900" font-size="9" fill="#fdbe33" text-anchor="middle">CONTROL</text>
+    <!-- BEFORE -->
+    <rect x="8" y="25" width="84" height="85" rx="4" fill="#1a0000"/>
+    <text x="50" y="40" font-family="Arial Black,Arial" font-weight="900" font-size="8" fill="#cc3300" text-anchor="middle">ANTES</text>
+    <!-- worn gear icon -->
+    <circle cx="50" cy="75" r="25" fill="none" stroke="#8b0000" stroke-width="4" stroke-dasharray="5,3"/>
+    <text x="50" y="80" font-family="Arial Black,Arial" font-weight="900" font-size="18" fill="#cc3300" text-anchor="middle">✖</text>
+    <text x="50" y="105" font-family="Arial,sans-serif" font-size="7" fill="#888" text-anchor="middle">Desgastado</text>
+    <!-- arrow -->
+    <polygon points="50,118 35,130 65,130" fill="#fdbe33"/>
+    <!-- AFTER -->
+    <rect x="8" y="133" width="84" height="70" rx="4" fill="#001a00"/>
+    <text x="50" y="148" font-family="Arial Black,Arial" font-weight="900" font-size="8" fill="#00cc66" text-anchor="middle">DESPUÉS</text>
+    <circle cx="50" cy="175" r="20" fill="none" stroke="#00cc66" stroke-width="3"/>
+    <text x="50" y="181" font-family="Arial Black,Arial" font-weight="900" font-size="16" fill="#00cc66" text-anchor="middle">✔</text>
+    <text x="50" y="205" font-family="Arial,sans-serif" font-size="7" fill="#aaa" text-anchor="middle">Reconstruido</text>
+  </g>
+
+  <!-- Bottom bar -->
+  <rect x="30" y="305" width="540" height="55" rx="8" fill="#0a1830" stroke="#1a3a6b" stroke-width="1"/>
+  <text x="300" y="323" font-family="Arial Black,Arial" font-weight="900" font-size="10" fill="#fdbe33" text-anchor="middle">RECONSTRUCCIÓN TOTAL — CABEZALES · GRUPOS TORNILLO · BLOQUES DE PISTÓN</text>
+  <text x="140" y="342" font-family="Arial,sans-serif" font-size="10" fill="#00cc66">✔ Tolerancias de fábrica</text>
+  <text x="280" y="342" font-family="Arial,sans-serif" font-size="10" fill="#00cc66">✔ Garantía de trabajo</text>
+  <text x="420" y="342" font-family="Arial,sans-serif" font-size="10" fill="#00cc66">✔ Ensayo de presión</text>
+  <text x="300" y="356" font-family="Arial,sans-serif" font-size="9" fill="#888" text-anchor="middle">Todas las marcas · Kaeser · Atlas Copco · Sullair · Ingersoll Rand · Worthington · Gardner Denver</text>
+</svg>

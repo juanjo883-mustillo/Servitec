@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Alquiler y Venta de Compresores Industriales — SERVITEC Buenos Aires</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="alquiler compresores industriales Buenos Aires, venta compresores a tornillo, alquiler compresor kaeser sullair atlas copco, compresores usados Buenos Aires" name="keywords">
+    <meta content="Alquiler y venta de compresores industriales en Buenos Aires. Equipos a tornillo de 0,5 a 21 m³/min. Marcas Kaeser, Sullair, Atlas Copco. Contratos flexibles — SERVITEC." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ===== ALTERNATING SECTIONS ===== */
+        .alq-section {
+            padding: 80px 0;
+        }
+        .alq-section.bg-light-alt {
+            background: #f8f8f8;
+        }
+        .alq-section.bg-white {
+            background: #ffffff;
+        }
+        .alq-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        .alq-img-wrap img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+        .alq-img-wrap::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 6px;
+            height: 100%;
+            background: #fdbe33;
+            z-index: 2;
+        }
+        .alq-img-wrap.border-right::before {
+            left: auto;
+            right: 0;
+        }
+        .alq-text {
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        .alq-text .alq-tag {
+            display: inline-block;
+            background: #fdbe33;
+            color: #030f27;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            margin-bottom: 18px;
+        }
+        .alq-text h2 {
+            color: #030f27;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            line-height: 1.25;
+        }
+        .alq-text p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.85;
+            margin-bottom: 14px;
+        }
+        .alq-text ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px;
+        }
+        .alq-text ul li {
+            color: #444;
+            font-size: 14px;
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+        .alq-text ul li i {
+            color: #fdbe33;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        .btn-alq {
+            display: inline-flex;
+            align-items: center;
+            background: #fdbe33;
+            color: #030f27;
+            padding: 12px 30px;
+            font-size: 14px;
+            font-weight: 700;
+            border: 2px solid #fdbe33;
+            border-radius: 0;
+            text-decoration: none;
+            transition: .3s;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        .btn-alq i { margin-right: 8px; }
+        .btn-alq:hover {
+            background: transparent;
+            color: #030f27;
+            text-decoration: none;
+        }
+        .btn-alq-outline {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            color: #030f27;
+            padding: 12px 30px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 2px solid #030f27;
+            border-radius: 0;
+            text-decoration: none;
+            transition: .3s;
+            margin-top: 5px;
+        }
+        .btn-alq-outline i { margin-right: 8px; }
+        .btn-alq-outline:hover {
+            background: #030f27;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* ===== HERO BANNER ===== */
+        .alq-hero {
+            background: #030f27;
+            padding: 80px 0 0;
+            overflow: hidden;
+        }
+        .alq-hero h1 {
+            color: #ffffff;
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .alq-hero h1 span {
+            color: #fdbe33;
+        }
+        .alq-hero .hero-sub {
+            color: #cccccc;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        .alq-hero .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .alq-hero .hero-badge {
+            background: rgba(253,190,51,.15);
+            border: 1px solid #fdbe33;
+            color: #fdbe33;
+            padding: 5px 15px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .alq-hero .hero-img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+            margin-top: 0;
+        }
+        .btn-alq-hero {
+            display: inline-flex;
+            align-items: center;
+            background: #fdbe33;
+            color: #030f27;
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: 700;
+            border: 2px solid #fdbe33;
+            border-radius: 0;
+            text-decoration: none;
+            transition: .3s;
+            margin-right: 12px;
+        }
+        .btn-alq-hero:hover {
+            background: transparent;
+            color: #fdbe33;
+            text-decoration: none;
+        }
+        .btn-alq-hero-out {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            color: #ffffff;
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            border: 2px solid #ffffff;
+            border-radius: 0;
+            text-decoration: none;
+            transition: .3s;
+        }
+        .btn-alq-hero-out:hover {
+            background: #ffffff;
+            color: #030f27;
+            text-decoration: none;
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            background: #fdbe33;
+            padding: 28px 0;
+        }
+        .stat-item {
+            text-align: center;
+            border-right: 1px solid rgba(3,15,39,.2);
+        }
+        .stat-item:last-child { border-right: none; }
+        .stat-item h3 {
+            color: #030f27;
+            font-size: 34px;
+            font-weight: 800;
+            margin: 0 0 4px;
+        }
+        .stat-item p {
+            color: #030f27;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== PILLARS GRID ===== */
+        .pilares-grid {
+            padding: 70px 0;
+            background: #030f27;
+        }
+        .pilar-card {
+            background: rgba(255,255,255,0.05);
+            border-top: 4px solid #fdbe33;
+            padding: 35px 28px;
+            height: 100%;
+            transition: background .3s;
+        }
+        .pilar-card:hover {
+            background: rgba(255,255,255,0.09);
+        }
+        .pilar-card .pilar-icon {
+            width: 65px;
+            height: 65px;
+            background: #fdbe33;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .pilar-card .pilar-icon i {
+            font-size: 26px;
+            color: #030f27;
+        }
+        .pilar-card h4 {
+            color: #fdbe33;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .pilar-card p {
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ===== MARCAS ===== */
+        .marcas-alq {
+            padding: 60px 0;
+            background: #ffffff;
+            border-top: 4px solid #fdbe33;
+        }
+        .marcas-alq .marca-logo {
+            filter: grayscale(100%);
+            opacity: 0.65;
+            transition: .3s;
+            max-width: 140px;
+            width: 100%;
+            height: 60px;
+            object-fit: contain;
+        }
+        .marcas-alq .marca-logo:hover {
+            filter: none;
+            opacity: 1;
+        }
+
+        /* ===== CTA FINAL ===== */
+        .cta-final-alq {
+            padding: 80px 0;
+            background: #030f27;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-final-alq::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: #fdbe33;
+        }
+        .cta-final-alq h2 {
+            color: #ffffff;
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .cta-final-alq h2 span {
+            color: #fdbe33;
+        }
+        .cta-final-alq p {
+            color: #cccccc;
+            font-size: 17px;
+            margin-bottom: 35px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-cta-wa {
+            display: inline-flex;
+            align-items: center;
+            background: #25D366;
+            color: #ffffff;
+            padding: 16px 38px;
+            font-size: 16px;
+            font-weight: 700;
+            border: 2px solid #25D366;
+            border-radius: 0;
+            text-decoration: none;
+            transition: .3s;
+            margin: 6px 8px;
+        }
+        .btn-cta-wa:hover {
+            background: transparent;
+            color: #25D366;
+            text-decoration: none;
+        }
+        .btn-cta-mail {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            color: #ffffff;
+            padding: 16px 38px;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid #ffffff;
+            border-radius: 0;
+            text-decoration: none;
+            transition: .3s;
+            margin: 6px 8px;
+        }
+        .btn-cta-mail:hover {
+            background: #ffffff;
+            color: #030f27;
+            text-decoration: none;
+        }
+
+        @media (max-width: 991px) {
+            .alq-img-wrap img { height: 280px; }
+            .alq-hero h1 { font-size: 26px; }
+            .alq-hero .hero-img { height: 260px; margin-top: 30px; }
+            .alq-text { padding: 30px 0 0; }
+            .cta-final-alq h2 { font-size: 24px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="top-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="logo">
+                            <a href="index.html"><h1>SERVITEC</h1></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon"><i class="flaticon-calendar"></i></div>
+                                    <div class="top-bar-text">
+                                        <h3>Nuestros Horarios</h3>
+                                        <p>Lunes a Viernes, 8:00 - 18:00 hs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon"><i class="flaticon-call"></i></div>
+                                    <div class="top-bar-text">
+                                        <h3>Nuestro Teléfono</h3>
+                                        <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank">1154674299</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon"><i class="flaticon-send-mail"></i></div>
+                                    <div class="top-bar-text">
+                                        <h3>Nuestro Mail</h3>
+                                        <p>servitec.tec@hotmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="nav-bar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-item nav-link">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link">Quiénes Somos</a>
+                            <a href="service.html" class="nav-item nav-link">Servicios</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Venta de Equipos</a>
+                                <div class="dropdown-menu">
+                                    <a href="blog.html" class="dropdown-item">Compresores</a>
+                                    <a href="single.html" class="dropdown-item">Repuestos</a>
+                                    <a href="alquiler.html" class="dropdown-item active">Alquiler y Venta</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Alquiler y Venta de Compresores</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="index.html">Inicio</a>
+                        <a href="alquiler.html">Alquiler y Venta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- ===== HERO SECTION ===== -->
+        <div class="alq-hero">
+            <div class="container-fluid px-0">
+                <div class="row no-gutters align-items-stretch">
+                    <div class="col-lg-6 d-flex align-items-center" style="padding: 60px 60px 60px 80px;">
+                        <div>
+                            <span style="display:inline-block;background:#fdbe33;color:#030f27;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:5px 16px;margin-bottom:22px;">
+                                +15 Años de Experiencia — Buenos Aires
+                            </span>
+                            <h1>Alquiler y Venta de <span>Compresores Industriales</span> en Argentina</h1>
+                            <p class="hero-sub">
+                                En <strong style="color:#fdbe33;">SERVITEC</strong>, entendemos que cada empresa requiere soluciones específicas para garantizar la continuidad de sus operaciones. Ofrecemos alquiler y venta de compresores a tornillo y secadores de aire con contratos flexibles, desde pymes hasta grandes corporaciones.
+                            </p>
+                            <div class="hero-badges">
+                                <span class="hero-badge"><i class="fas fa-compress-arrows-alt" style="margin-right:6px;"></i>0,5 a 21 m³/min</span>
+                                <span class="hero-badge"><i class="fas fa-industry" style="margin-right:6px;"></i>Kaeser · Sullair · Atlas Copco</span>
+                                <span class="hero-badge"><i class="fas fa-tools" style="margin-right:6px;"></i>Nuevos y reacondicionados</span>
+                            </div>
+                            <div style="margin-top:10px;">
+                                <a href="https://wha.link/eE9y0e" class="btn-alq-hero" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp" style="margin-right:8px;font-size:18px;"></i> Consultar Ahora
+                                </a>
+                                <a href="contact.html" class="btn-alq-hero-out">
+                                    <i class="fas fa-envelope" style="margin-right:8px;"></i> Enviar Consulta
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 px-0">
+                        <img src="img/Compresores-1024x803.png" alt="Compresores industriales SERVITEC Buenos Aires" class="hero-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+
+        <!-- ===== STATS BAR ===== -->
+        <div class="stats-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-3 stat-item py-2">
+                        <h3>15+</h3>
+                        <p>Años en el Rubro</p>
+                    </div>
+                    <div class="col-6 col-md-3 stat-item py-2">
+                        <h3>485</h3>
+                        <p>Clientes Activos</p>
+                    </div>
+                    <div class="col-6 col-md-3 stat-item py-2">
+                        <h3>789</h3>
+                        <p>Equipos Instalados</p>
+                    </div>
+                    <div class="col-6 col-md-3 stat-item py-2">
+                        <h3>24/7</h3>
+                        <p>Soporte Técnico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Stats Bar End -->
+
+
+        <!-- ===== FOUR PILLARS ===== -->
+        <div class="pilares-grid">
+            <div class="container">
+                <div class="section-header text-center" style="margin-bottom:40px;">
+                    <p style="color:#fdbe33;">Lo que nos hace diferentes</p>
+                    <h2 style="color:#ffffff;">Cuatro Razones Para Elegir SERVITEC</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="pilar-card">
+                            <div class="pilar-icon"><i class="fas fa-handshake"></i></div>
+                            <h4>Alquiler a Medida</h4>
+                            <p>Disponemos de planes de alquiler de equipos flexibles que se ajustan a tus necesidades operativas y presupuesto. Contratos mensuales, trimestrales o por proyecto.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="pilar-card">
+                            <div class="pilar-icon"><i class="fas fa-industry"></i></div>
+                            <h4>Venta de Equipos Nuevos y Usados</h4>
+                            <p>Ofrecemos una variedad de compresores y secadores nuevos y reacondicionados, inspeccionados y con garantía. Stock disponible para entrega inmediata.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="pilar-card">
+                            <div class="pilar-icon"><i class="fas fa-user-cog"></i></div>
+                            <h4>Asesoramiento Personalizado</h4>
+                            <p>Nuestros técnicos con 15 años de experiencia te guían en la selección del equipo más adecuado para tu proceso industrial, flujos de trabajo y consumo de aire.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="pilar-card">
+                            <div class="pilar-icon"><i class="fas fa-wrench"></i></div>
+                            <h4>Soporte Técnico Especializado</h4>
+                            <p>Brindamos mantenimiento preventivo y soporte operativo para todos los equipos alquilados y vendidos. Disponibilidad 24hs, 7 días de la semana.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pillars End -->
+
+
+        <!-- ===== SECCIÓN 1: ALQUILER A MEDIDA ===== -->
+        <div class="alq-section bg-white wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="alq-img-wrap border-right">
+                            <img src="img/compresordeairexafamyc.png" alt="Alquiler de compresores industriales SERVITEC" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="alq-text" style="padding-left: 40px;">
+                            <span class="alq-tag">Alquiler</span>
+                            <h2>Alquiler de Compresores Industriales a Medida</h2>
+                            <p>
+                                Sabemos que no todas las empresas necesitan un compresor de forma permanente. Por eso ofrecemos <strong>planes de alquiler flexibles</strong> que se adaptan a picos de demanda, paradas de planta, proyectos temporales o como solución de emergencia ante una avería.
+                            </p>
+                            <p>
+                                Nuestros equipos en alquiler llegan instalados, probados y listos para funcionar. Incluye soporte técnico, mantenimiento durante el contrato y reemplazo del equipo ante cualquier inconveniente.
+                            </p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Compresores a tornillo de 0,5 a 21 m³/min</li>
+                                <li><i class="fas fa-check-circle"></i> Secadores de aire comprimido incluidos según necesidad</li>
+                                <li><i class="fas fa-check-circle"></i> Contratos mensuales, trimestrales o anuales</li>
+                                <li><i class="fas fa-check-circle"></i> Instalación, puesta en marcha y retiro del equipo</li>
+                                <li><i class="fas fa-check-circle"></i> Soporte técnico incluido durante todo el contrato</li>
+                                <li><i class="fas fa-check-circle"></i> Reemplazo garantizado ante fallas</li>
+                            </ul>
+                            <div>
+                                <a href="https://wha.link/eE9y0e" class="btn-alq" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Consultar Alquiler
+                                </a>
+                                <a href="contact.html" class="btn-alq-outline">
+                                    <i class="fas fa-envelope"></i> Enviar Consulta
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sección 1 End -->
+
+
+        <!-- ===== SECCIÓN 2: VENTA NUEVOS Y USADOS ===== -->
+        <div class="alq-section bg-light-alt wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                        <div class="alq-img-wrap">
+                            <img src="img/compresordeairevelocidadvariable.png" alt="Venta de compresores nuevos y usados SERVITEC" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="alq-text" style="padding-right: 40px;">
+                            <span class="alq-tag">Venta</span>
+                            <h2>Venta de Equipos Nuevos y Reacondicionados</h2>
+                            <p>
+                                Ofrecemos una amplia variedad de <strong>compresores a tornillo y de pistón</strong>, tanto nuevos como reacondicionados, de las principales marcas del mercado. Todos los equipos usados pasan por una inspección técnica completa y cuentan con garantía de funcionamiento.
+                            </p>
+                            <p>
+                                Con 15 años en el rubro, conocemos cada modelo en profundidad. Te asesoramos para que inviertas en el equipo correcto, evitando costos innecesarios de sobredimensionamiento o pérdidas por subdimensionamiento.
+                            </p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Equipos nuevos de marcas líderes: Kaeser, Sullair, Atlas Copco</li>
+                                <li><i class="fas fa-check-circle"></i> Compresores reacondicionados inspeccionados y garantizados</li>
+                                <li><i class="fas fa-check-circle"></i> Instalación y puesta en marcha incluida</li>
+                                <li><i class="fas fa-check-circle"></i> Capacitación al operario</li>
+                                <li><i class="fas fa-check-circle"></i> Servicio técnico post-venta propio</li>
+                                <li><i class="fas fa-check-circle"></i> Financiación y presupuesto sin cargo</li>
+                            </ul>
+                            <div>
+                                <a href="https://wha.link/eE9y0e" class="btn-alq" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Ver Disponibilidad
+                                </a>
+                                <a href="blog.html" class="btn-alq-outline">
+                                    <i class="fas fa-list"></i> Ver Catálogo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sección 2 End -->
+
+
+        <!-- ===== SECCIÓN 3: ASESORAMIENTO PERSONALIZADO ===== -->
+        <div class="alq-section bg-white wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="alq-img-wrap border-right">
+                            <img src="img/historia1.jpeg" alt="Asesoramiento técnico de compresores SERVITEC" loading="lazy" style="object-position: center top;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="alq-text" style="padding-left: 40px;">
+                            <span class="alq-tag">Asesoramiento</span>
+                            <h2>Servicio de Asesoramiento Técnico Personalizado</h2>
+                            <p>
+                                Elegir el compresor incorrecto puede costar caro: mayor consumo eléctrico, paradas frecuentes o capacidad insuficiente para tu proceso. En <strong>SERVITEC</strong> visitamos tu planta, analizamos tu consumo real de aire y te recomendamos el equipo ideal.
+                            </p>
+                            <p>
+                                Nuestros técnicos tienen más de 15 años trabajando con compresores industriales en toda la provincia de Buenos Aires. Ese conocimiento es tuyo, sin costo, antes de tomar cualquier decisión.
+                            </p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Visita técnica sin cargo a tu planta</li>
+                                <li><i class="fas fa-check-circle"></i> Análisis de consumo y dimensionamiento del equipo</li>
+                                <li><i class="fas fa-check-circle"></i> Comparativa de opciones (alquiler vs. compra)</li>
+                                <li><i class="fas fa-check-circle"></i> Presupuesto detallado en el día</li>
+                                <li><i class="fas fa-check-circle"></i> Asesoramiento en ahorro energético</li>
+                                <li><i class="fas fa-check-circle"></i> Sin compromiso de compra</li>
+                            </ul>
+                            <div>
+                                <a href="https://wha.link/eE9y0e" class="btn-alq" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Pedir Visita Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sección 3 End -->
+
+
+        <!-- ===== SECCIÓN 4: SOPORTE TÉCNICO ===== -->
+        <div class="alq-section bg-light-alt wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                        <div class="alq-img-wrap">
+                            <img src="img/portada.jpeg" alt="Soporte técnico especializado compresores SERVITEC" loading="lazy" style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="alq-text" style="padding-right: 40px;">
+                            <span class="alq-tag">Soporte Técnico</span>
+                            <h2>Soporte Técnico Especializado las 24hs</h2>
+                            <p>
+                                Cuando tu compresor falla, cada minuto cuenta. Nuestro equipo técnico está disponible <strong>las 24 horas, los 7 días de la semana</strong> para responder emergencias y mantener tu producción en marcha.
+                            </p>
+                            <p>
+                                Tanto para los equipos que alquilás como para los que compraste con nosotros, tenés acceso directo a nuestro soporte técnico. Contamos con stock de repuestos para las principales marcas del mercado para resolver la mayoría de las fallas en la misma visita.
+                            </p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Atención de emergencias 24hs / 7 días</li>
+                                <li><i class="fas fa-check-circle"></i> Diagnóstico remoto y presencial</li>
+                                <li><i class="fas fa-check-circle"></i> Stock de repuestos para todas las marcas</li>
+                                <li><i class="fas fa-check-circle"></i> Planes de mantenimiento preventivo programado</li>
+                                <li><i class="fas fa-check-circle"></i> Técnicos certificados con 15+ años de experiencia</li>
+                                <li><i class="fas fa-check-circle"></i> Cobertura en toda la provincia de Buenos Aires</li>
+                            </ul>
+                            <div>
+                                <a href="https://wha.link/eE9y0e" class="btn-alq" rel="noopener noreferrer" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Llamar Ahora
+                                </a>
+                                <a href="service.html" class="btn-alq-outline">
+                                    <i class="fas fa-tools"></i> Ver Servicios
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sección 4 End -->
+
+
+        <!-- ===== MARCAS ===== -->
+        <div class="marcas-alq wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Equipos con aval de marca</p>
+                    <h2>Trabajamos con las Mejores Marcas del Mercado</h2>
+                </div>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-6 col-md-3 col-lg-2 text-center mb-4">
+                        <img src="img/logo-kaeser.svg" alt="Kaeser" class="marca-logo" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center mb-4">
+                        <img src="img/logo-atlascopco.svg" alt="Atlas Copco" class="marca-logo" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center mb-4">
+                        <img src="img/logo-sullair.svg" alt="Sullair" class="marca-logo" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center mb-4">
+                        <img src="img/logo-ingersoll.svg" alt="Ingersoll Rand" class="marca-logo" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center mb-4">
+                        <img src="img/logo-quincy.svg" alt="Quincy" class="marca-logo" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center mb-4">
+                        <img src="img/logo-worthington.svg" alt="Worthington" class="marca-logo" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center mb-4">
+                        <img src="img/logo-cetec.svg" alt="Cetec" class="marca-logo" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center mb-4">
+                        <img src="img/logo-gardnerdenver.svg" alt="Gardner Denver" class="marca-logo" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Marcas End -->
+
+
+        <!-- ===== CTA FINAL ===== -->
+        <div class="cta-final-alq wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <h2>Descubrí cómo nuestros equipos pueden <span>potenciar tu negocio</span></h2>
+                <p>Contactanos hoy y te preparamos un presupuesto a medida — sin costo, sin compromiso. Respuesta en minutos.</p>
+                <div>
+                    <a href="https://wha.link/eE9y0e" class="btn-cta-wa" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-whatsapp" style="margin-right:10px;font-size:20px;"></i> Escribir por WhatsApp
+                    </a>
+                    <a href="contact.html" class="btn-cta-mail">
+                        <i class="fas fa-envelope" style="margin-right:10px;"></i> Enviar Consulta por Mail
+                    </a>
+                </div>
+                <div style="margin-top:35px; padding-top:30px; border-top:1px solid rgba(255,255,255,0.1);">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 text-center mb-3">
+                            <i class="fas fa-phone-alt" style="color:#fdbe33;font-size:20px;margin-bottom:8px;display:block;"></i>
+                            <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank" style="color:#fff;font-size:18px;font-weight:600;text-decoration:none;">1154674299</a>
+                        </div>
+                        <div class="col-md-4 text-center mb-3">
+                            <i class="fas fa-envelope" style="color:#fdbe33;font-size:20px;margin-bottom:8px;display:block;"></i>
+                            <span style="color:#ccc;font-size:15px;">servitec.tec@hotmail.com</span>
+                        </div>
+                        <div class="col-md-4 text-center mb-3">
+                            <i class="fas fa-map-marker-alt" style="color:#fdbe33;font-size:20px;margin-bottom:8px;display:block;"></i>
+                            <span style="color:#ccc;font-size:15px;">Marcos Paz, Buenos Aires</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CTA Final End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-contact">
+                            <h2>Nuestros Contactos</h2>
+                            <p><i class="fa fa-map-marker-alt"></i> Astarita 1950, Marcos Paz, Buenos Aires, Argentina</p>
+                            <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank" class="cel"><i class="fa fa-phone-alt"></i> 1154674299</a>
+                            <p><i class="fa fa-envelope"></i> servitec.tec@hotmail.com</p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Twitter de SERVITEC"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Facebook de SERVITEC"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram de SERVITEC"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn de SERVITEC"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-link">
+                            <h2>Nuestras Páginas</h2>
+                            <a href="./index.html">Inicio</a>
+                            <a href="./about.html">Quiénes Somos</a>
+                            <a href="./service.html">Servicios</a>
+                            <a href="./blog.html">Compresores</a>
+                            <a href="./single.html">Repuestos</a>
+                            <a href="./alquiler.html">Alquiler y Venta</a>
+                            <a href="./contact.html">Contacto</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="newsletter">
+                            <h2>Nuestras Novedades</h2>
+                            <p>Recibí información sobre equipos y servicio técnico</p>
+                            <div class="form">
+                                <input class="form-control" type="email" placeholder="tu@email.com" aria-label="Tu dirección de email">
+                                <button class="btn" type="submit">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

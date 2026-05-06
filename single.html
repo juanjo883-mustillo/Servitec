@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es">
+
+<head>
     <meta charset="utf-8">
-    <title>SERVITEC</title>
+    <title>Repuestos para Compresores — SERVITEC</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Construction Company Website Template" name="keywords">
-    <meta content="Construction Company Website Template" name="description">
+    <meta content="repuestos compresores, filtros compresores, lubricantes compresores, repuestos kaeser, repuestos atlas copco, repuestos sullair, Buenos Aires" name="keywords">
+    <meta content="Repuestos originales y alternativos para compresores industriales. Filtros de aire, aceite, separadores, lubricantes y más. Stock inmediato en Buenos Aires." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -26,10 +28,179 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ---- Repuestos category cards ---- */
+        .repuesto-card {
+            background: #ffffff;
+            border-top: 4px solid #fdbe33;
+            padding: 35px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform .3s, box-shadow .3s;
+            height: 100%;
+        }
+        .repuesto-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.14);
+        }
+        .repuesto-card .repuesto-icon {
+            width: 75px;
+            height: 75px;
+            background: #fdbe33;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .repuesto-card .repuesto-icon i {
+            font-size: 32px;
+            color: #030f27;
+        }
+        .repuesto-card h4 {
+            color: #030f27;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .repuesto-card p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ---- Categorías section background ---- */
+        .repuestos-categorias {
+            padding: 60px 0 30px;
+            background: #f5f5f5;
+        }
+
+        /* ---- Why choose section ---- */
+        .why-servitec {
+            padding: 60px 0;
+            background: #030f27;
+        }
+        .why-servitec .section-header p,
+        .why-servitec .section-header h2 {
+            color: #ffffff;
+        }
+        .why-servitec .section-header h2::after {
+            background: #fdbe33;
+        }
+        .why-item {
+            text-align: center;
+            padding: 20px 15px;
+            color: #ffffff;
+        }
+        .why-item .why-icon {
+            width: 70px;
+            height: 70px;
+            background: #fdbe33;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+        }
+        .why-item .why-icon i {
+            font-size: 30px;
+            color: #030f27;
+        }
+        .why-item h4 {
+            color: #fdbe33;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .why-item p {
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ---- Marcas strip ---- */
+        .marcas-strip {
+            padding: 40px 0;
+            background: #ffffff;
+            border-top: 3px solid #fdbe33;
+            border-bottom: 3px solid #fdbe33;
+        }
+        .marcas-strip h5 {
+            color: #030f27;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+        .marca-badge {
+            display: inline-block;
+            background: #030f27;
+            color: #fdbe33;
+            padding: 6px 16px;
+            margin: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* ---- CTA banner ---- */
+        .cta-repuestos {
+            padding: 60px 0;
+            background: #fdbe33;
+            text-align: center;
+        }
+        .cta-repuestos h2 {
+            color: #030f27;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .cta-repuestos p {
+            color: #030f27;
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+        .cta-repuestos .btn-dark-cta {
+            background: #030f27;
+            color: #ffffff;
+            padding: 14px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid #030f27;
+            border-radius: 0;
+            transition: .3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cta-repuestos .btn-dark-cta:hover {
+            background: transparent;
+            color: #030f27;
+        }
+
+        /* ---- Intro section ---- */
+        .repuestos-intro {
+            padding: 55px 0 40px;
+            background: #ffffff;
+        }
+        .repuestos-intro p.lead-text {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto 10px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="wrapper">
+
         <!-- Top Bar Start -->
         <div class="top-bar">
             <div class="container-fluid">
@@ -38,7 +209,6 @@
                         <div class="logo">
                             <a href="index.html">
                                 <h1>SERVITEC</h1>
-                                <!-- <img src="img/logo.jpg" alt="Logo"> -->
                             </a>
                         </div>
                     </div>
@@ -61,8 +231,8 @@
                                         <i class="flaticon-call"></i>
                                     </div>
                                     <div class="top-bar-text">
-                                        <h3>Nuestros telefonos</h3>
-                                        <a href="https://wha.link/eE9y0e">1154674299</a>
+                                        <h3>Nuestro Teléfono</h3>
+                                        <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank">1154674299</a>
                                     </div>
                                 </div>
                             </div>
@@ -72,8 +242,8 @@
                                         <i class="flaticon-send-mail"></i>
                                     </div>
                                     <div class="top-bar-text">
-                                        <h3>Nuestos Mail</h3>
-                                        <p>servitec@gmail.com</p>
+                                        <h3>Nuestro Mail</h3>
+                                        <p>servitec.tec@hotmail.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +254,7 @@
         </div>
         <!-- Top Bar End -->
 
-          <!-- Nav Bar Start -->
+        <!-- Nav Bar Start -->
         <div class="nav-bar">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -92,639 +262,320 @@
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto">
-                            <a href="index.html" class="nav-item nav-link active">inicio</a>
-                            <a href="about.html" class="nav-item nav-link">Quienes Somos</a>
-                            <a href="service.html" class="nav-item nav-link">servicios</a>
-                            <a href="team.html" class="nav-item nav-link">Nuestro Equipo</a>
-                            <a href="portfolio.html" class="nav-item nav-link">Nuestros trabajos</a>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-item nav-link">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link">Quiénes Somos</a>
+                            <a href="service.html" class="nav-item nav-link">Servicios</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">venta de equipos</a>
+                                <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Venta de Equipos</a>
                                 <div class="dropdown-menu">
                                     <a href="blog.html" class="dropdown-item">Compresores</a>
-                                    <a href="single.html" class="dropdown-item">Respuestos</a>
-                                    <a href="single.html" class="dropdown-item">bombas</a>
+                                    <a href="single.html" class="dropdown-item active">Repuestos</a>
+                                    <a href="alquiler.html" class="dropdown-item">Alquiler y Venta</a>
                                 </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contacto</a>
-
                         </div>
+                    </div>
                 </nav>
             </div>
         </div>
         <!-- Nav Bar End -->
 
 
-            <!-- Page Header Start -->
-            <div class="page-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Single Page</h2>
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Repuestos para Compresores</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="index.html">Inicio</a>
+                        <a href="single.html">Repuestos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Intro Section Start -->
+        <div class="repuestos-intro wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="section-header text-left">
+                            <p>Stock disponible — Entrega inmediata en Buenos Aires</p>
+                            <h2>Repuestos Originales y Alternativos</h2>
                         </div>
-                        <div class="col-12">
-                            <a href="">Home</a>
-                            <a href="">Single Page</a>
+                        <p style="color:#555;font-size:15px;line-height:1.8;">
+                            Contamos con un amplio stock multimarca de repuestos para compresores a tornillo y de pistón.
+                            Trabajamos con piezas para las principales marcas del mercado:
+                            <strong>Kaeser, Sullair, Atlas Copco, Worthington, Cetec</strong> y muchas más.
+                        </p>
+                        <p style="color:#555;font-size:15px;line-height:1.8;">
+                            Todos nuestros repuestos están seleccionados para garantizar el máximo rendimiento
+                            y la mayor durabilidad de tus equipos, minimizando los tiempos de parada.
+                        </p>
+                        <a href="https://wha.link/eE9y0e" class="btn" rel="noopener noreferrer" target="_blank"
+                           style="background:#fdbe33;color:#030f27;border:2px solid #fdbe33;border-radius:0;padding:12px 30px;font-weight:600;">
+                            Consultar Disponibilidad
+                        </a>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img src="img/compresordeairevelocidadvariable.png" alt="Compresor industrial con repuestos disponibles"
+                             loading="lazy" style="max-width:100%;height:auto;border-top:4px solid #fdbe33;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Intro Section End -->
+
+
+        <!-- Marcas Strip Start -->
+        <div class="marcas-strip wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container text-center">
+                <h5 class="mb-4">Repuestos compatibles con las principales marcas del mercado</h5>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                        <img src="img/logo-kaeser.svg" alt="Kaeser Compresores" style="max-width:140px;width:100%;height:60px;object-fit:contain;">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                        <img src="img/logo-atlascopco.svg" alt="Atlas Copco" style="max-width:140px;width:100%;height:60px;object-fit:contain;">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                        <img src="img/logo-sullair.svg" alt="Sullair Argentina" style="max-width:140px;width:100%;height:60px;object-fit:contain;">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                        <img src="img/logo-ingersoll.svg" alt="Ingersoll Rand" style="max-width:140px;width:100%;height:60px;object-fit:contain;">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                        <img src="img/logo-quincy.svg" alt="Quincy Compressor" style="max-width:140px;width:100%;height:60px;object-fit:contain;">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                        <img src="img/logo-gardnerdenver.svg" alt="Gardner Denver" style="max-width:140px;width:100%;height:60px;object-fit:contain;">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                        <img src="img/logo-worthington.svg" alt="Worthington Compressors" style="max-width:140px;width:100%;height:60px;object-fit:contain;">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                        <img src="img/logo-cetec.svg" alt="Cetec Compresores" style="max-width:140px;width:100%;height:60px;object-fit:contain;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Marcas Strip End -->
+
+
+        <!-- Categorías Section Start -->
+        <div class="repuestos-categorias">
+            <div class="container">
+                <div class="section-header text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <p>Lo que necesitás, cuando lo necesitás</p>
+                    <h2>Repuestos de Alta Calidad Disponibles</h2>
+                </div>
+
+                <div class="row">
+                    <!-- Filtros de Aire -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="repuesto-card">
+                            <div class="repuesto-icon">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <h4>Filtros de Aire</h4>
+                            <p>Imprescindibles para mantener el aire limpio y libre de contaminantes. Mejoran la eficiencia del compresor y prolongan la vida útil de los componentes internos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Filtros de Aceite -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="repuesto-card">
+                            <div class="repuesto-icon">
+                                <i class="fas fa-oil-can"></i>
+                            </div>
+                            <h4>Filtros de Aceite</h4>
+                            <p>Aseguran una lubricación correcta y evitan el desgaste prematuro de las piezas móviles. Disponibles en versiones originales y alternativas de igual calidad.</p>
+                        </div>
+                    </div>
+
+                    <!-- Filtros Separadores -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="repuesto-card">
+                            <div class="repuesto-icon">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <h4>Filtros Separadores</h4>
+                            <p>Eliminan el aceite del aire comprimido garantizando un aire limpio a la salida. Fundamentales para procesos industriales que requieren aire de calidad.</p>
+                        </div>
+                    </div>
+
+                    <!-- Lubricantes -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="repuesto-card">
+                            <div class="repuesto-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h4>Lubricantes Especializados</h4>
+                            <p>Fórmulas específicas para compresores a tornillo y de pistón que prolongan la vida útil del equipo, reducen la fricción y optimizan el rendimiento térmico.</p>
+                        </div>
+                    </div>
+
+                    <!-- Válvulas -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="repuesto-card">
+                            <div class="repuesto-icon">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <h4>Válvulas y Piezas Internas</h4>
+                            <p>Válvulas de admisión, de mínima presión, termostáticas y de seguridad. Piezas de recambio para cabezales, cierres y juntas de alta temperatura.</p>
+                        </div>
+                    </div>
+
+                    <!-- Correas y Transmisión -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="repuesto-card">
+                            <div class="repuesto-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h4>Correas, Rodamientos y Más</h4>
+                            <p>Correas de transmisión, rodamientos, sellos mecánicos, manómetros y todos los insumos que necesitás para el mantenimiento preventivo y correctivo.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Page Header End -->
+        </div>
+        <!-- Categorías Section End -->
 
 
-            <!-- Single Post Start-->
-            <div class="single">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="single-content wow fadeInUp">
-                                <img src="img/single.jpg" />
-                                <h2>Lorem ipsum dolor sit amet</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer molestie, lorem eu eleifend bibendum, augue purus mollis sapien, non rhoncus eros leo in nunc. Donec a nulla vel turpis consectetur tempor ac vel justo. In hac habitasse platea dictumst. Cras nec sollicitudin eros. Nunc eu enim non turpis sagittis rhoncus consectetur id augue. Mauris dignissim neque felis. Phasellus mollis mi a pharetra cursus. Maecenas vulputate augue placerat lacus mattis, nec ornare risus sollicitudin.
-                                </p>
-                                <p>
-                                    Mauris eu pulvinar tellus, eu luctus nisl. Pellentesque suscipit mi eu varius pulvinar. Aenean vulputate, massa eget elementum finibus, ipsum arcu commodo est, ut mattis eros orci ac risus. Suspendisse ornare, massa in feugiat facilisis, eros nisl auctor lacus, laoreet tempus elit dolor eu lorem. Nunc a arcu suscipit, suscipit quam quis, semper augue.
-                                </p>
-                                <p>
-                                    Quisque arcu nulla, convallis nec orci vel, suscipit elementum odio. Curabitur volutpat velit non diam tincidunt sodales. Nullam sapien libero, bibendum nec viverra in, iaculis ut eros.
-                                </p>
-                                <h3>Lorem ipsum dolor sit amet</h3>
-                                <p>
-                                    Vestibulum sit amet ullamcorper sem. Integer hendrerit elit eget purus sodales maximus. Quisque ac nulla arcu. Morbi venenatis arcu ac arcu cursus pharetra. Morbi sit amet viverra augue, ac ultricies libero. Praesent elementum lectus mi, eu elementum urna venenatis sed. Donec auctor purus ut mattis feugiat. Integer mi erat, consectetur sed tincidunt vitae, sagittis elementum libero. Vivamus a mauris consequat, hendrerit lectus in, fermentum libero. Integer mattis bibendum neque et porttitor.
-                                </p>
-                                <p>
-                                    Mauris quis arcu finibus, posuere dolor eu, viverra felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In porta, ex vitae accumsan facilisis, nisi tellus dictum metus, quis fringilla dui tellus in tellus. Praesent pharetra orci at vehicula posuere. Sed molestie fringilla lorem, vel imperdiet tortor blandit at. Quisque non ultrices lorem, eget rhoncus orci. Fusce porttitor placerat diam et mattis. Nam laoreet, ex eu posuere sollicitudin, sem tortor pellentesque ipsum, quis mattis purus lectus ut lacus. Integer eu risus ac est interdum scelerisque.
-                                </p>
-                                <h4>Lorem ipsum dolor sit amet</h4>
-                                <p>
-                                    Praesent ultricies, mauris eget vestibulum viverra, neque lorem malesuada mauris, eget rhoncus lectus enim a lorem. Vivamus at vehicula risus, eget facilisis massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et posuere sapien. Fusce bibendum lorem sem, quis tincidunt felis mattis nec.
-                                </p>
-                                <p>
-                                    Proin vel nulla purus. Nunc nec eros in nisi efficitur rutrum quis sed eros. Mauris felis dolor, rhoncus eget gravida vitae, pretium vel arcu. Cras blandit tellus eget tellus dictum venenatis. Sed ultricies bibendum dictum. Etiam facilisis erat id turpis tincidunt malesuada. Duis bibendum sapien eu condimentum sagittis. Proin nunc lorem, ullamcorper vel tortor sodales, imperdiet lacinia dui. Sed congue, felis id rhoncus varius, urna lacus imperdiet nunc, ut porttitor mauris mi quis mi. Integer rutrum est finibus metus eleifend scelerisque. Morbi auctor dignissim purus in interdum. Vestibulum eu dictum enim. Suspendisse et sem vitae velit feugiat facilisis.
-                                </p>
-                                <p>
-                                    Nam sodales scelerisque nunc sed convallis. Vestibulum facilisis porta erat, sit amet pharetra tortor blandit id. Nunc velit tellus, consectetur sed convallis in, tincidunt finibus nulla. Integer vel ex in mauris tincidunt tincidunt nec sed elit. Etiam pretium lectus lectus, sed aliquet erat tristique euismod. Praesent faucibus nisl augue, ac tempus libero pellentesque malesuada. Vivamus iaculis imperdiet laoreet. Aliquam vel felis felis. Proin sed sapien erat. Etiam a quam et metus tempor rutrum. Curabitur in faucibus justo. Etiam imperdiet iaculis urna.
-                                </p>
+        <!-- Why Servitec Section Start -->
+        <div class="why-servitec">
+            <div class="container">
+                <div class="section-header text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <p style="color:#fdbe33;">La diferencia está en los detalles</p>
+                    <h2 style="color:#ffffff;">¿Por Qué Elegir los Repuestos de SERVITEC?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-boxes"></i>
                             </div>
-                            <div class="single-tags wow fadeInUp">
-                                <a href="">National</a>
-                                <a href="">International</a>
-                                <a href="">Economics</a>
-                                <a href="">Politics</a>
-                                <a href="">Lifestyle</a>
-                                <a href="">Technology</a>
-                                <a href="">Trades</a>
-                            </div>
-                            <div class="single-bio wow fadeInUp">
-                                <div class="single-bio-img">
-                                    <img src="img/user.jpg" />
-                                </div>
-                                <div class="single-bio-text">
-                                    <h3>Author Name</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="single-related wow fadeInUp">
-                                <h2>Related Post</h2>
-                                <div class="owl-carousel related-slider">
-                                    <div class="post-item">
-                                        <div class="post-img">
-                                            <img src="img/post-1.jpg" />
-                                        </div>
-                                        <div class="post-text">
-                                            <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                            <div class="post-meta">
-                                                <p>By<a href="">Admin</a></p>
-                                                <p>In<a href="">Design</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="post-item">
-                                        <div class="post-img">
-                                            <img src="img/post-2.jpg" />
-                                        </div>
-                                        <div class="post-text">
-                                            <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                            <div class="post-meta">
-                                                <p>By<a href="">Admin</a></p>
-                                                <p>In<a href="">Design</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="post-item">
-                                        <div class="post-img">
-                                            <img src="img/post-3.jpg" />
-                                        </div>
-                                        <div class="post-text">
-                                            <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                            <div class="post-meta">
-                                                <p>By<a href="">Admin</a></p>
-                                                <p>In<a href="">Design</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="post-item">
-                                        <div class="post-img">
-                                            <img src="img/post-4.jpg" />
-                                        </div>
-                                        <div class="post-text">
-                                            <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                            <div class="post-meta">
-                                                <p>By<a href="">Admin</a></p>
-                                                <p>In<a href="">Design</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="single-comment wow fadeInUp">
-                                <h2>3 Comments</h2>
-                                <ul class="comment-list">
-                                    <li class="comment-item">
-                                        <div class="comment-body">
-                                            <div class="comment-img">
-                                                <img src="img/user.jpg" />
-                                            </div>
-                                            <div class="comment-text">
-                                                <h3><a href="">Josh Dunn</a></h3>
-                                                <span>01 Jan 2045 at 12:00pm</span>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst. 
-                                                </p>
-                                                <a class="btn" href="">Reply</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="comment-item">
-                                        <div class="comment-body">
-                                            <div class="comment-img">
-                                                <img src="img/user.jpg" />
-                                            </div>
-                                            <div class="comment-text">
-                                                <h3><a href="">Josh Dunn</a></h3>
-                                                <p><span>01 Jan 2045 at 12:00pm</span></p>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst. 
-                                                </p>
-                                                <a class="btn" href="">Reply</a>
-                                            </div>
-                                        </div>
-                                        <ul class="comment-child">
-                                            <li class="comment-item">
-                                                <div class="comment-body">
-                                                    <div class="comment-img">
-                                                        <img src="img/user.jpg" />
-                                                    </div>
-                                                    <div class="comment-text">
-                                                        <h3><a href="">Josh Dunn</a></h3>
-                                                        <p><span>01 Jan 2045 at 12:00pm</span></p>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst. 
-                                                        </p>
-                                                        <a class="btn" href="">Reply</a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="comment-form wow fadeInUp">
-                                <h2>Leave a comment</h2>
-                                <form>
-                                    <div class="form-group">
-                                        <label for="name">Name *</label>
-                                        <input type="text" class="form-control" id="name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email *</label>
-                                        <input type="email" class="form-control" id="email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="website">Website</label>
-                                        <input type="url" class="form-control" id="website">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="message">Message *</label>
-                                        <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="submit" value="Post Comment" class="btn">
-                                    </div>
-                                </form>
-                            </div>
+                            <h4>Variedad y Disponibilidad</h4>
+                            <p>Stock permanente de repuestos originales y alternativos para las marcas más usadas en la industria argentina.</p>
                         </div>
-
-                        <div class="col-lg-4">
-                            <div class="sidebar">
-                                <div class="sidebar-widget wow fadeInUp">
-                                    <div class="search-widget">
-                                        <form>
-                                            <input class="form-control" type="text" placeholder="Search Keyword">
-                                            <button class="btn"><i class="fa fa-search"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-widget wow fadeInUp">
-                                    <h2 class="widget-title">Recent Post</h2>
-                                    <div class="recent-post">
-                                        <div class="post-item">
-                                            <div class="post-img">
-                                                <img src="img/post-1.jpg" />
-                                            </div>
-                                            <div class="post-text">
-                                                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                <div class="post-meta">
-                                                    <p>By<a href="">Admin</a></p>
-                                                    <p>In<a href="">Design</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="post-item">
-                                            <div class="post-img">
-                                                <img src="img/post-2.jpg" />
-                                            </div>
-                                            <div class="post-text">
-                                                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                <div class="post-meta">
-                                                    <p>By<a href="">Admin</a></p>
-                                                    <p>In<a href="">Design</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="post-item">
-                                            <div class="post-img">
-                                                <img src="img/post-3.jpg" />
-                                            </div>
-                                            <div class="post-text">
-                                                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                <div class="post-meta">
-                                                    <p>By<a href="">Admin</a></p>
-                                                    <p>In<a href="">Design</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="post-item">
-                                            <div class="post-img">
-                                                <img src="img/post-4.jpg" />
-                                            </div>
-                                            <div class="post-text">
-                                                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                <div class="post-meta">
-                                                    <p>By<a href="">Admin</a></p>
-                                                    <p>In<a href="">Design</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="post-item">
-                                            <div class="post-img">
-                                                <img src="img/post-5.jpg" />
-                                            </div>
-                                            <div class="post-text">
-                                                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                <div class="post-meta">
-                                                    <p>By<a href="">Admin</a></p>
-                                                    <p>In<a href="">Design</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-widget wow fadeInUp">
-                                    <div class="image-widget">
-                                        <a href="#"><img src="img/blog-1.jpg" alt="Image"></a>
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-widget wow fadeInUp">
-                                    <div class="tab-post">
-                                        <ul class="nav nav-pills nav-justified">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-toggle="pill" href="#featured">Featured</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-toggle="pill" href="#popular">Popular</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-toggle="pill" href="#latest">Latest</a>
-                                            </li>
-                                        </ul>
-
-                                        <div class="tab-content">
-                                            <div id="featured" class="container tab-pane active">
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-1.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-2.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-3.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-4.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-5.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="popular" class="container tab-pane fade">
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-1.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-2.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-3.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-4.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-5.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="latest" class="container tab-pane fade">
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-1.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-2.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-3.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-4.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-item">
-                                                    <div class="post-img">
-                                                        <img src="img/post-5.jpg" />
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                                        <div class="post-meta">
-                                                            <p>By<a href="">Admin</a></p>
-                                                            <p>In<a href="">Design</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-widget wow fadeInUp">
-                                    <div class="image-widget">
-                                        <a href="#"><img src="img/blog-2.jpg" alt="Image"></a>
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-widget wow fadeInUp">
-                                    <h2 class="widget-title">Categories</h2>
-                                    <div class="category-widget">
-                                        <ul>
-                                            <li><a href="">National</a><span>(98)</span></li>
-                                            <li><a href="">International</a><span>(87)</span></li>
-                                            <li><a href="">Economics</a><span>(76)</span></li>
-                                            <li><a href="">Politics</a><span>(65)</span></li>
-                                            <li><a href="">Lifestyle</a><span>(54)</span></li>
-                                            <li><a href="">Technology</a><span>(43)</span></li>
-                                            <li><a href="">Trades</a><span>(32)</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-widget wow fadeInUp">
-                                    <div class="image-widget">
-                                        <a href="#"><img src="img/blog-3.jpg" alt="Image"></a>
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-widget wow fadeInUp">
-                                    <h2 class="widget-title">Tags Cloud</h2>
-                                    <div class="tag-widget">
-                                        <a href="">National</a>
-                                        <a href="">International</a>
-                                        <a href="">Economics</a>
-                                        <a href="">Politics</a>
-                                        <a href="">Lifestyle</a>
-                                        <a href="">Technology</a>
-                                        <a href="">Trades</a>
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-widget wow fadeInUp">
-                                    <h2 class="widget-title">Text Widget</h2>
-                                    <div class="text-widget">
-                                        <p>
-                                            Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea nec eros. Nunc eu enim non turpis id augue.
-                                        </p>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-user-cog"></i>
                             </div>
+                            <h4>Asesoramiento Experto</h4>
+                            <p>Nuestros técnicos con 15 años de experiencia te ayudan a encontrar exactamente el repuesto que tu equipo necesita.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <h4>Entrega Rápida</h4>
+                            <p>Entrega inmediata en toda la zona de Buenos Aires. Evitá paradas prolongadas en tu producción con nuestro servicio ágil.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4>Solución Integral</h4>
+                            <p>No solo te vendemos el repuesto: también lo instalamos. Ofrecemos el servicio técnico completo para que tu equipo funcione perfecto.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Single Post End-->   
+        </div>
+        <!-- Why Servitec Section End -->
 
 
-            <!-- Footer Start -->
- <!-- Footer Start -->
+        <!-- CTA Section Start -->
+        <div class="cta-repuestos wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <h2>¿Necesitás un Repuesto Ahora?</h2>
+                <p>Consultanos por WhatsApp y te respondemos en minutos — te asesoramos sin cargo.</p>
+                <a href="https://wha.link/eE9y0e" class="btn-dark-cta" rel="noopener noreferrer" target="_blank">
+                    <i class="fab fa-whatsapp" style="margin-right:8px;"></i> Consultar por WhatsApp
+                </a>
+                &nbsp;&nbsp;
+                <a href="contact.html" class="btn-dark-cta" style="margin-top:10px; display:inline-block;">
+                    <i class="fas fa-envelope" style="margin-right:8px;"></i> Enviar Consulta
+                </a>
+            </div>
+        </div>
+        <!-- CTA Section End -->
+
+
+        <!-- Footer Start -->
         <div class="footer wow fadeIn" data-wow-delay="0.3s">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-3 ">
-                <div class="footer-contact">
-                    <h2>Nuestros Contactos</h2>
-                    <p><i class="fa fa-map-marker-alt"></i>Astarita 1950, Marcos Paz, Buenos Aires, Argentina</p>
-                    <a><i class="fa fa-phone-alt"></i></a><a href="https://wha.link/eE9y0e" class="cel">     1154674299</a>
-                    <p><i class="fa fa-envelope"></i>servitec@gmail.com</p>
-                    <div class="footer-social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-contact">
+                            <h2>Nuestros Contactos</h2>
+                            <p><i class="fa fa-map-marker-alt"></i> Astarita 1950, Marcos Paz, Buenos Aires, Argentina</p>
+                            <a href="https://wha.link/eE9y0e" rel="noopener noreferrer" target="_blank" class="cel"><i class="fa fa-phone-alt"></i> 1154674299</a>
+                            <p><i class="fa fa-envelope"></i> servitec.tec@hotmail.com</p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Twitter de SERVITEC"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Facebook de SERVITEC"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram de SERVITEC"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn de SERVITEC"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 ">
-                <div class="footer-link">
-                    <h2>Nuestras Paginas</h2>
-                    <a href="./index.html">Inicio</a>
-                    <a href="./contact.html">Contacto</a>
-                    <a href="./team.html">Nuestro Equipo</a>
-                    <a href="./blog.html">venta de equipos</a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 ">
-                <div class="newsletter">
-                    <h2> Nuestras Novedades</h2>
-                    <p> recibi toda nuestra informacion sobre equipos y servicio Tecnico </p>
-                    <div class="form">
-                        <input class="form-control" placeholder="mail">
-                        <button class="btn">Enviar</button>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-link">
+                            <h2>Nuestras Páginas</h2>
+                            <a href="./index.html">Inicio</a>
+                            <a href="./service.html">Servicios</a>
+                            <a href="./single.html">Repuestos</a>
+                            <a href="./blog.html">Compresores</a>
+                            <a href="./contact.html">Contacto</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="newsletter">
+                            <h2>Nuestras Novedades</h2>
+                            <p>Recibí información sobre equipos y servicio técnico</p>
+                            <div class="form">
+                                <input class="form-control" type="email" placeholder="tu@email.com" aria-label="Tu dirección de email">
+                                <button class="btn" type="submit">Enviar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     </div>
-</div>
-            <!-- Footer End -->
 
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-        </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
 </html>
